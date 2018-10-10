@@ -1,0 +1,380 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="css/Home.css" rel="stylesheet" />
+    <script src="js/Home.js"></script>
+
+    <link rel="icon" href="Images/RM-Logo.ico" />
+    <title>Ratnadeep Mitra</title>
+
+    <script type="text/javascript">
+
+        if (window.location.hash === '#clk_problem') {
+            document.onreadystatechange = function () {
+                if (document.readyState === 'complete') {
+                    showSection("clk_problem");
+                }
+            }
+        }
+        else if (window.location.hash === '#clk_dataCollect') {
+            document.onreadystatechange = function () {
+                if (document.readyState === 'complete') {
+                    showSection("clk_dataCollect");
+                }
+            }
+        }
+        else if (window.location.hash === '#clk_potentialAnalysis') {
+            document.onreadystatechange = function () {
+                if (document.readyState === 'complete') {
+                    showSection("clk_potentialAnalysis");
+                }
+            }
+        }
+        else if (window.location.hash === '#clk_dataCleaning') {
+            document.onreadystatechange = function () {
+                if (document.readyState === 'complete') {
+                    showSection("clk_dataCleaning");
+                }
+            }
+        }
+        else if (window.location.hash === '#clk_bibliography') {
+            document.onreadystatechange = function () {
+                if (document.readyState === 'complete') {
+                    showSection("clk_bibliography");
+                }
+            }
+        }
+
+        function showSection(id) {
+            if (id == "clk_problem") {
+                document.getElementById('problem').style.display = 'inline';
+                document.getElementById('dataCollect').style.display = 'none';
+                document.getElementById('potentialAnalysis').style.display = 'none';
+                document.getElementById('dataCleaning').style.display = 'none';
+                document.getElementById('bibliography').style.display = 'none';
+                document.getElementById('clk_problem').parentNode.classList.add('active');
+                document.getElementById('clk_dataCollect').parentNode.classList.remove('active');
+                document.getElementById('clk_potentialAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.remove('active');
+                document.getElementById('clk_bibliography').parentNode.classList.remove('active');
+            }
+            else if (id == "clk_dataCollect") {
+                document.getElementById('problem').style.display = 'none';
+                document.getElementById('dataCollect').style.display = 'inline';
+                document.getElementById('potentialAnalysis').style.display = 'none';
+                document.getElementById('dataCleaning').style.display = 'none';
+                document.getElementById('bibliography').style.display = 'none';
+                document.getElementById('clk_problem').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCollect').parentNode.classList.add('active');
+                document.getElementById('clk_potentialAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.remove('active');
+                document.getElementById('clk_bibliography').parentNode.classList.remove('active');
+            }
+            else if (id == "clk_potentialAnalysis") {
+                document.getElementById('problem').style.display = 'none';
+                document.getElementById('dataCollect').style.display = 'none';
+                document.getElementById('potentialAnalysis').style.display = 'inline';
+                document.getElementById('dataCleaning').style.display = 'none';
+                document.getElementById('bibliography').style.display = 'none';
+                document.getElementById('clk_problem').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCollect').parentNode.classList.remove('active');
+                document.getElementById('clk_potentialAnalysis').parentNode.classList.add('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.remove('active');
+                document.getElementById('clk_bibliography').parentNode.classList.remove('active');
+            }
+            else if (id == "clk_dataCleaning") {
+                document.getElementById('problem').style.display = 'none';
+                document.getElementById('dataCollect').style.display = 'none';
+                document.getElementById('potentialAnalysis').style.display = 'none';
+                document.getElementById('dataCleaning').style.display = 'inline';
+                document.getElementById('bibliography').style.display = 'none';
+                document.getElementById('clk_problem').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCollect').parentNode.classList.remove('active');
+                document.getElementById('clk_potentialAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.add('active');
+                document.getElementById('clk_bibliography').parentNode.classList.remove('active');
+            }
+            else if (id == "clk_bibliography") {
+                document.getElementById('problem').style.display = 'none';
+                document.getElementById('dataCollect').style.display = 'none';
+                document.getElementById('potentialAnalysis').style.display = 'none';
+                document.getElementById('dataCleaning').style.display = 'none';
+                document.getElementById('bibliography').style.display = 'inline';
+                document.getElementById('clk_problem').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCollect').parentNode.classList.remove('active');
+                document.getElementById('clk_potentialAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.remove('active');
+                document.getElementById('clk_bibliography').parentNode.classList.add('active');
+            }
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+    <!--<img src="../../../Images/Banner.JPG" style="width:100%;" />-->
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../../../ProjectsHome.html" id="nav_Projects">Projects</a></li>
+                    <li><a href="../../../VizHome.html" id="nav_Viz">Visualizations</a></li>
+                    <li><a href="../../../ResumeHome.html" id="nav_Resume">Resume</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>&nbsp;&nbsp;ANLY - 501
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#" id="clk_problem" onclick="showSection(id)">The Problem</a></li>
+                    <li><a href="#" id="clk_dataCollect" onclick="showSection(id)">Data Collection</a></li>
+                    <li><a href="#" id="clk_potentialAnalysis" onclick="showSection(id)">Potential Analysis</a></li>
+                    <li><a href="#" id="clk_dataCleaning" onclick="showSection(id)">Data Cleaning</a></li>
+                    <li><a href="#" id="clk_bibliography" onclick="showSection(id)">Bibliography</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="row">
+
+        <div class="col-md-2">
+            <div class="navbar navbar-fixed-left">
+                <div class="list-group" style="z-index:5">
+                    <a href="#" class="list-group-item" style="background-color: #404040; color:white;">
+                        <i class="fa fa-file-o" aria-hidden="true"></i>&nbsp;Project 1
+                    </a>
+                    <a href="/Projects/YelpWeather/Project2/Project2.html" class="list-group-item list-group-item-action">
+                        <i class="fa fa-file-o" aria-hidden="true"></i>&nbsp;Project 2
+                    </a>
+                    <a href="/Projects/YelpWeather/Project3/Project3.html" class="list-group-item list-group-item-action">
+                        <i class="fa fa-file-o" aria-hidden="true"></i>&nbsp;Project 3
+                    </a>
+                </div>
+                <br /><br />
+                <ul class="list-group">
+                    <li class="list-group-item" style="background-color: #404040; color:white;"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;The Team</li>
+                    <li class="list-group-item list-group-item-info"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;April Chung</li>
+                    <li class="list-group-item list-group-item-info"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;Kendra Gedney</li>
+                    <li class="list-group-item list-group-item-info"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;Yipin Lu</li>
+                    <li class="list-group-item list-group-item-info"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;Ratnadeep Mitra</li>
+                </ul>
+                <br /><br />
+                <form action="https://drive.google.com/a/georgetown.edu/file/d/1GrSE3bVzfP-TsCzBDOQgAFbYliFcGiT6/view?usp=sharing">
+                    <input type="submit" value="Go to files" class="btn" style="background-color: #404040; color:white; width:100%; cursor:pointer" />
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-10">
+
+            <div id="writeup" style="padding-right:30px">
+
+                <div style="font-size: 175%;"><u>The Relationship between Weather and Yelp Reviews</u></div><br />
+
+                <div id="problem">
+                    <h3>I.  Data Science Problem</h3><br />
+                    <h4><i>a.   Our Big Idea</i></h4>
+                    <div style="text-align: justify;">
+                        Does the weather affect people's moods so much that they will rate restaurants lower or higher? Do people write more positive, five-star reviews on nice days because they are in a better mood? Does good weather lead to people have better experiences at restaurants, and lead to positive reviews? In either case, we know people are affected by the weather in general - but want to investigate if this effect is detectable in restaurant reviews.
+                        <br /><br />
+                        A few applications to this data science problem:
+                        <br /><br />
+                        <i>Marketing</i>
+                        <br />
+                        For the restaurant, if they knew this correlation to exist, they could use weather-based marketing to help compensate for any negative effect. Restaurants could change the atmosphere to create a better mood or offer services depending on weather. For example, "It may be rainy outside, but it's sunny in here!" or "It's 100 degrees outside, so come enjoy a free frozen lemonade with any entree purchase".
+                        <br /><br />
+                        <i>More accurate information</i>
+                        <br />
+                        Restaurants and restaurant-goers both make decisions from Yelp reviews. For Yelp to provide better information to its consumers, they could weigh the reviews based on the weather to account for any possible weather effect.
+                    </div><br />
+                    <h4><i>b.   Previous Research</i></h4>
+                    <div style="text-align: justify;">
+                        Previous research explores the relationship between people's behavior and the weather. In 2013, Horanont, <i>et al.</i> [1] use GPS location traces on mobile phones to passively track behavioral patterns in different weather. The researchers find many detectible differences in behavior, including that people tend to stay at restaurants longer in colder weather.
+                        <br /><br />
+                        Some research focuses specifically on the effect of weather on how people rate and review businesses. Agarwal and Xu [2] discuss the effect of weather on people's mood on their Yelp business reviews and ratings. Weather was measured by rainfall, humidity, temperature, and wind speed. The authors conclude that there is an impact, however, more sophisticated research is needed.
+                        <br /><br />
+                        Bakhshi, <i>et al.</i> [3] study 1.1M Yelp restaurant reviews to determine influencing factors. They find that external factors - especially weather - significantly affect the customer's review and rating of restaurants.
+                    </div><br />
+                </div>
+
+                <div id="dataCollect" style="display:none">
+                    <h3>II.  Collecting New Data</h3><br />
+                    <div style="text-align: justify;">We pulled data from three sources: Yelp.com, Census.gov, and NOAA.gov. All provide rich data that is free and accessible.</div><br />
+                    <h4><i>a.   Yelp and Census data</i></h4>
+                    <div style="text-align: justify;">
+                        We used Yelp's API to collect data from restaurants across the US. Yelp limits API calls to 20 restaurants per US County with 3 reviews (in full text) per restaurant. Since we wanted a large sample of reviews from across the US, we pulled Yelp data for 300 US counties.
+                        <br /><br />
+                        We used Census data to access a clean list of US counties by population. We used the <i>requests</i> package to access the <b>CO-EST2016-alldata.csv</b> file and imported it as <b>USA_Counties_RawData.csv</b>. We sorted this data by population and used the top 300 counties to feed into the Yelp API.
+                        <br /><br />
+                        We used the Yelp API (based on the 300 counties) to generate two datasets, Reviews and Detail. Yelp Reviews data <b>(Restaurant_Reviews_RawData.csv)</b> provides full text reviews by restaurant, with the rating, date, username of the reviewer, and URL link to the review. Yelp Detail data <b>(Restaurant_Details_RawData.csv)</b> provides restaurant-level details, including latitude and longitude, address, city, phone number, category (pizza, tacos, etc.), price range, overall star rating, and number of reviews.
+                    </div><br />
+                    <h4><i>b.   Weather data</i></h4>
+                    <div style="text-align: justify;">
+                        NOAA makes their data publicly available through an FTP system. We found that many other historical weather datasets are not free - making NOAA the best option.
+                        <br /><br />
+                        To access the NOAA data, we used the <i>ftplib</i> package in Python3 to transfer the files. We collected two files, <b>2017.csv.gz</b> and <b>ghcnd-stations.txt</b>.
+                        <br /><br />
+                        <b>2017.csv.gz</b> is a large datafile containing daily weather measurements from weather stations across the world for 2017-to-date, including precipitation, temperature, and snowfall. <b>ghcnd-stations.txt</b> is a reference file, providing details about each weather station. We merged the datafiles to append the latitude and longitude for each station, resulting in one file <b>2017_Weather_RawData.csv</b>.
+                    </div><br />
+                    <h4><i>b.   Summary of collected data</i></h4>
+                    <div style="text-align: justify;">
+                        After completing the collection process, we had three datafiles to work with: <b>Restaurant_Reviews_RawData.csv,  Restaurant_Details_RawData.csv</b>, and  <b>2017_Weather_RawData.csv</b>.  The collection times and file sizes are:
+                        <br /><br />
+                        <center>
+                            <img src="/YelpWeather/Project1/SummaryOfCollectedData.png" />
+                        </center>
+                    </div><br />
+                </div>
+
+                <div id="potentialAnalysis" style="display:none">
+                    <h3>III.  Potential Analysis using Collected Data</h3><br />
+                    <div style="text-align: justify;">
+                        We have ~17,000 Yelp reviews from ~5,800 restaurants across the US. We have daily weather measures (precipitation, snow and temperature) from 7,711 weather stations across the US. We will merge the datasets (by latitude and longitude) to investigate the relationship between the reviews and the weather.  The principal analysis will be to compare weather measurements (precipitation and temperature) with the sentiment of the Yelp review and the Yelp rating by date and location.
+                        <br /><br />
+                        We will use sentiment analysis on the text of each review to gauge the level of positivity.  We will use the Python3 package <i>textblob</i> based on the Natural Language Toolkit (NLTK) to do this analysis.
+                        <br /><br />
+                        Since the Yelp data is rich beyond the review text and star ratings, we can also investigate the effect of the restaurants price range, the restaurant category, and whether the restaurant accepts reservations.
+                        <br /><br />
+                        Given that we have data from across the country for all of 2017-to-date, we could also investigate regional differences and seasonal differences. For example, the relationship between weather and reviews may be stronger in areas with larger weather variations versus those without (Northeast vs. Southern California).
+                    </div><br />
+                </div>
+
+                <div id="dataCleaning" style="display:none">
+                    <h3>IV.  Cleaning the Data (& Data Issues)</h3><br />
+                    <h4><i>a.   Yelp Reviews data</i></h4>
+                    <div style="text-align: justify;">
+                        For the Yelp Reviews data, we reduced the size of the datafile and did some cleaning.
+                        <br /><br />
+                        The cleaning included:
+                        <ul>
+                            <li>Dropped unnecessary columns</li>
+                            <li>Converted date format (to match with date format in the weather data)</li>
+                            <li>Checked date range, and dropped reviews not from 2017</li>
+                            <li>Checked for missing values, which there were none</li>
+                        </ul>
+                    </div><br />
+                    <h4><i>b.   Yelp Detail data</i></h4>
+                    <div style="text-align: justify;">
+                        For the Yelp Detail data, we also reduced the size of the datafile and performed some quality checks.
+                        <br /><br />
+                        The data preparation included:
+                        <ul>
+                            <li>Dropped unnecessary columns</li>
+                            <li>Dropped rows for restaurants with no reviews</li>
+                            <li>Combined three location address columns into one column</li>
+                        </ul>
+                        For quality checks, we checked for missing values for all columns. Only one restaurant had missing latitude and longitude - we researched the restaurant "Milya cafe" to determine its coordinates. We wrote code to repair that row with the appropriate data. Other missing values are not a problem, as those columns are not necessary for analysis.
+                        <br /><br />
+                        Lastly, we found bad data in the 'transaction' column, so we removed all values that began with "http". We also removed all brackets from the values in that column.
+                    </div><br />
+                    <h4><i>c.   County data</i></h4>
+                    <div style="text-align: justify;">
+                        To prepare the county data, we reduced the size of the data and transformed it so that we could feed it into the Yelp API for data collection. This process included removing unnecessary columns and unnecessary rows, for example, state-level population measures.
+                        <br /><br />
+                        This dataset was clean, we did not detect any anomalies, as expected given its reputable source. We performed quality checks including: checking the minimum and maximum values and the difference in population from 2015 and 2016 estimates. Even for the most extreme population gain, was only a +2% increase.
+                    </div><br />
+                    <h4><i>d.   Weather data</i></h4>
+                    <div style="text-align: justify;">
+                        The weather data included 52 measurement types from weather stations across the world. We reduced the data to US weather stations only and performed some cleaning. The data did not have many accuracy issues, we only dropped a few measurements for questionable accuracy.
+                        <br /><br />
+                        The data preparation included:
+                        <ul>
+                            <li>Dropped unnecessary columns</li>
+                            <li>Dropped rows with values in column 5 which was a quality flag</li>
+                            <li>Dropped all weather measurements except for precipitation (PRCP), snow (SNOW), and temperature (TAVG, TMIN and TMAX) since those are the most common</li>
+                            <li>Reformatted the dates, and temperature measure to &deg;C</li>
+                            <li>Reshaped the data so that we had a column for each measure, and dropped rows that did have values for at least PRCP and TAVG or TMIN and TMAX</li>
+                        </ul>
+                        The quality checks included:
+                        <ul>
+                            <li>Checked temperature range by looking and its range and histogram. Outliers were checked by hand. For example, the maximum temperature is 52.8&deg;C/ 127.04&deg;F - and that was confirmed as coming from the Death Valley weather station. </li>
+                            <li>Checked precipitation values by looking at its range and histogram. Outliers were checked by hand. For example, 463.6 mm (18 inches) of rain on August 30, 2017, which was confirmed as coming from a southeastern Texas weather station during Hurricane Harvey. </li>
+                        </ul>
+                        Although extreme values exist in the weather data, we feel confident in their accuracy and decided not to drop any. However, there were instances for which the TMIN was greater than TMAX, we dropped those rows.
+                        <br /><br />
+                        Finally, we checked for valid date ranges, valid latitude and longitude, and missing values. No other issues were detected.
+                    </div><br />
+                    <h4><i>e.   Summary of cleaned data</i></h4>
+                    <div style="text-align: justify;">
+                        After completing the cleaning process, we had three datafiles to work with: <b>Restaurant_Reviews_CleanData.csv</b>, <b>Restaurant_Detail_CleanData.csv</b>, and <b>2017_Weather_CleanData.csv</b>. The cleaning times and file sizes are:
+                        <br /><br />
+                        <center>
+                            <img src="/YelpWeather/Project1/img2.png" />
+                        </center>
+                        <br />
+                        Lastly, we mapped our data by latitude and longitude. The weather stations are in blue dots, the restaurants are in red dots. The restaurant data is spread across the US, with more data in more populous areas. The weather stations are dense, which should provide us with robust weather data for the analysis portion.
+                        <br /><br />
+                        <center>
+                            <img src="/YelpWeather/Project1/img3.png" />
+                        </center>
+                    </div><br />
+                </div>
+
+                <div id="bibliography" style="display:none">
+                    <h3>V.  Bibliography</h3><br />
+                    <div style="text-align: justify;">
+                        [1] Teerayut Horanont, Santi Phithakkitnukoon, Tuck W. Leong, Yoshihide Sekimoto and Ryosuke Shibasaki, "Weather Effects on the Patterns of People's Everyday Activities: A Study Using GPS Traces of Mobile Phone Users", <i>NCBI</i>, vol. 8, no. 12, December, 2013.
+                        <br /><br />
+                        [2] Nitin Agarwal, Kevin Xu, "Social Computing, Behavioral-Cultural Modeling, and Prediction", <i>8th International Conference</i>, SBP 2015, Washington, DC, 2015, pp.416
+                        <br /><br />
+                        [3] Saeideh Bakhshi, Partha Kanuparthy, Eric Gilbert. "Demographics, weather and online reviews: a study of restaurant recommendations," <i>WWW '14 Conference</i>, Seoul, South Korea, 2014, pp. 443-454.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="navbar navbar-fixed-bottom" id="footer" style="background-color: #ffffb3; height:40px; font-family:Verdana, Geneva, Tahoma, sans-serif; vertical-align:middle">
+        <div id="footerView" class="site-footer">
+            <center>
+                <div style="padding-top:10px"><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>&nbsp;&nbsp;Ratnadeep Mitra</div>
+            </center>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,794 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="css/Home.css" rel="stylesheet" />
+    <script src="js/Home.js"></script>
+
+    <link rel="icon" href="Images/RM-Logo.ico" />
+    <title>Ratnadeep Mitra</title>
+
+    <script type="text/javascript">
+
+        if (window.location.hash === '#clk_preprocessing') {
+            document.onreadystatechange = function () {
+                if (document.readyState === 'complete') {
+                    showSection("clk_preprocessing");
+                }
+            }
+        }
+        else if (window.location.hash === '#clk_associationRules') {
+            document.onreadystatechange = function () {
+                if (document.readyState === 'complete') {
+                    showSection("clk_associationRules");
+                }
+            }
+        }
+
+        function showSection(id) {
+            if (id == "clk_intro") {
+                document.getElementById('intro').style.display = 'inline';
+                document.getElementById('preprocessing').style.display = 'none';
+                document.getElementById('binning').style.display = 'none';
+                document.getElementById('sentimentAnalysis').style.display = 'none';
+                document.getElementById('statsAnalysis').style.display = 'none';
+                document.getElementById('outlierDetection').style.display = 'none';
+                document.getElementById('dataCleaning').style.display = 'none';
+                document.getElementById('correlations').style.display = 'none';
+                document.getElementById('clusterAnalysis').style.display = 'none';
+                document.getElementById('associationRules').style.display = 'none';
+                document.getElementById('predictiveAndHypothesis').style.display = 'none';
+                document.getElementById('conclusion').style.display = 'none';
+                document.getElementById('clk_intro').parentNode.classList.add('active');
+                document.getElementById('clk_preprocessing').parentNode.classList.remove('active');
+                document.getElementById('clk_binning').parentNode.classList.remove('active');
+                document.getElementById('clk_sentimentAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_statsAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_outlierDetection').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.remove('active');
+                document.getElementById('clk_correlations').parentNode.classList.remove('active');
+                document.getElementById('clk_clusterAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_associationRules').parentNode.classList.remove('active');
+                document.getElementById('clk_predictiveAndHypothesis').parentNode.classList.remove('active');
+                document.getElementById('clk_conclusion').parentNode.classList.remove('active');
+            }
+            else if (id == "clk_preprocessing") {
+                document.getElementById('intro').style.display = 'none';
+                document.getElementById('preprocessing').style.display = 'inline';
+                document.getElementById('binning').style.display = 'none';
+                document.getElementById('sentimentAnalysis').style.display = 'none';
+                document.getElementById('statsAnalysis').style.display = 'none';
+                document.getElementById('outlierDetection').style.display = 'none';
+                document.getElementById('dataCleaning').style.display = 'none';
+                document.getElementById('correlations').style.display = 'none';
+                document.getElementById('clusterAnalysis').style.display = 'none';
+                document.getElementById('associationRules').style.display = 'none';
+                document.getElementById('predictiveAndHypothesis').style.display = 'none';
+                document.getElementById('conclusion').style.display = 'none';
+                document.getElementById('clk_intro').parentNode.classList.remove('active');
+                document.getElementById('clk_preprocessing').parentNode.classList.add('active');
+                document.getElementById('clk_binning').parentNode.classList.remove('active');
+                document.getElementById('clk_sentimentAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_statsAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_outlierDetection').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.remove('active');
+                document.getElementById('clk_correlations').parentNode.classList.remove('active');
+                document.getElementById('clk_clusterAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_associationRules').parentNode.classList.remove('active');
+                document.getElementById('clk_predictiveAndHypothesis').parentNode.classList.remove('active');
+                document.getElementById('clk_conclusion').parentNode.classList.remove('active');
+            }
+            else if (id == "clk_binning") {
+                document.getElementById('intro').style.display = 'none';
+                document.getElementById('preprocessing').style.display = 'none';
+                document.getElementById('binning').style.display = 'inline';
+                document.getElementById('sentimentAnalysis').style.display = 'none';
+                document.getElementById('statsAnalysis').style.display = 'none';
+                document.getElementById('outlierDetection').style.display = 'none';
+                document.getElementById('dataCleaning').style.display = 'none';
+                document.getElementById('correlations').style.display = 'none';
+                document.getElementById('clusterAnalysis').style.display = 'none';
+                document.getElementById('associationRules').style.display = 'none';
+                document.getElementById('predictiveAndHypothesis').style.display = 'none';
+                document.getElementById('conclusion').style.display = 'none';
+                document.getElementById('clk_intro').parentNode.classList.remove('active');
+                document.getElementById('clk_preprocessing').parentNode.classList.remove('active');
+                document.getElementById('clk_binning').parentNode.classList.add('active');
+                document.getElementById('clk_sentimentAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_statsAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_outlierDetection').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.remove('active');
+                document.getElementById('clk_correlations').parentNode.classList.remove('active');
+                document.getElementById('clk_clusterAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_associationRules').parentNode.classList.remove('active');
+                document.getElementById('clk_predictiveAndHypothesis').parentNode.classList.remove('active');
+                document.getElementById('clk_conclusion').parentNode.classList.remove('active');
+            }
+            else if (id == "clk_sentimentAnalysis") {
+                document.getElementById('intro').style.display = 'none';
+                document.getElementById('preprocessing').style.display = 'none';
+                document.getElementById('binning').style.display = 'none';
+                document.getElementById('sentimentAnalysis').style.display = 'inline';
+                document.getElementById('statsAnalysis').style.display = 'none';
+                document.getElementById('outlierDetection').style.display = 'none';
+                document.getElementById('dataCleaning').style.display = 'none';
+                document.getElementById('correlations').style.display = 'none';
+                document.getElementById('clusterAnalysis').style.display = 'none';
+                document.getElementById('associationRules').style.display = 'none';
+                document.getElementById('predictiveAndHypothesis').style.display = 'none';
+                document.getElementById('conclusion').style.display = 'none';
+                document.getElementById('clk_intro').parentNode.classList.remove('active');
+                document.getElementById('clk_preprocessing').parentNode.classList.remove('active');
+                document.getElementById('clk_binning').parentNode.classList.remove('active');
+                document.getElementById('clk_sentimentAnalysis').parentNode.classList.add('active');
+                document.getElementById('clk_statsAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_outlierDetection').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.remove('active');
+                document.getElementById('clk_correlations').parentNode.classList.remove('active');
+                document.getElementById('clk_clusterAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_associationRules').parentNode.classList.remove('active');
+                document.getElementById('clk_predictiveAndHypothesis').parentNode.classList.remove('active');
+                document.getElementById('clk_conclusion').parentNode.classList.remove('active');
+            }
+            else if (id == "clk_statsAnalysis") {
+                document.getElementById('intro').style.display = 'none';
+                document.getElementById('preprocessing').style.display = 'none';
+                document.getElementById('binning').style.display = 'none';
+                document.getElementById('sentimentAnalysis').style.display = 'none';
+                document.getElementById('statsAnalysis').style.display = 'inline';
+                document.getElementById('outlierDetection').style.display = 'none';
+                document.getElementById('dataCleaning').style.display = 'none';
+                document.getElementById('correlations').style.display = 'none';
+                document.getElementById('clusterAnalysis').style.display = 'none';
+                document.getElementById('associationRules').style.display = 'none';
+                document.getElementById('predictiveAndHypothesis').style.display = 'none';
+                document.getElementById('conclusion').style.display = 'none';
+                document.getElementById('clk_intro').parentNode.classList.remove('active');
+                document.getElementById('clk_preprocessing').parentNode.classList.remove('active');
+                document.getElementById('clk_binning').parentNode.classList.remove('active');
+                document.getElementById('clk_sentimentAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_statsAnalysis').parentNode.classList.add('active');
+                document.getElementById('clk_outlierDetection').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.remove('active');
+                document.getElementById('clk_correlations').parentNode.classList.remove('active');
+                document.getElementById('clk_clusterAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_associationRules').parentNode.classList.remove('active');
+                document.getElementById('clk_predictiveAndHypothesis').parentNode.classList.remove('active');
+                document.getElementById('clk_conclusion').parentNode.classList.remove('active');
+            }
+            else if (id == "clk_outlierDetection") {
+                document.getElementById('intro').style.display = 'none';
+                document.getElementById('preprocessing').style.display = 'none';
+                document.getElementById('binning').style.display = 'none';
+                document.getElementById('sentimentAnalysis').style.display = 'none';
+                document.getElementById('statsAnalysis').style.display = 'none';
+                document.getElementById('outlierDetection').style.display = 'inline';
+                document.getElementById('dataCleaning').style.display = 'none';
+                document.getElementById('correlations').style.display = 'none';
+                document.getElementById('clusterAnalysis').style.display = 'none';
+                document.getElementById('associationRules').style.display = 'none';
+                document.getElementById('predictiveAndHypothesis').style.display = 'none';
+                document.getElementById('conclusion').style.display = 'none';
+                document.getElementById('clk_intro').parentNode.classList.remove('active');
+                document.getElementById('clk_preprocessing').parentNode.classList.remove('active');
+                document.getElementById('clk_binning').parentNode.classList.remove('active');
+                document.getElementById('clk_sentimentAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_statsAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_outlierDetection').parentNode.classList.add('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.remove('active');
+                document.getElementById('clk_correlations').parentNode.classList.remove('active');
+                document.getElementById('clk_clusterAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_associationRules').parentNode.classList.remove('active');
+                document.getElementById('clk_predictiveAndHypothesis').parentNode.classList.remove('active');
+                document.getElementById('clk_conclusion').parentNode.classList.remove('active');
+            }
+            else if (id == "clk_dataCleaning") {
+                document.getElementById('intro').style.display = 'none';
+                document.getElementById('preprocessing').style.display = 'none';
+                document.getElementById('binning').style.display = 'none';
+                document.getElementById('sentimentAnalysis').style.display = 'none';
+                document.getElementById('statsAnalysis').style.display = 'none';
+                document.getElementById('outlierDetection').style.display = 'none';
+                document.getElementById('dataCleaning').style.display = 'inline';
+                document.getElementById('correlations').style.display = 'none';
+                document.getElementById('clusterAnalysis').style.display = 'none';
+                document.getElementById('associationRules').style.display = 'none';
+                document.getElementById('predictiveAndHypothesis').style.display = 'none';
+                document.getElementById('conclusion').style.display = 'none';
+                document.getElementById('clk_intro').parentNode.classList.remove('active');
+                document.getElementById('clk_preprocessing').parentNode.classList.remove('active');
+                document.getElementById('clk_binning').parentNode.classList.remove('active');
+                document.getElementById('clk_sentimentAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_statsAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_outlierDetection').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.add('active');
+                document.getElementById('clk_correlations').parentNode.classList.remove('active');
+                document.getElementById('clk_clusterAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_associationRules').parentNode.classList.remove('active');
+                document.getElementById('clk_predictiveAndHypothesis').parentNode.classList.remove('active');
+                document.getElementById('clk_conclusion').parentNode.classList.remove('active');
+            }
+            else if (id == "clk_correlations") {
+                document.getElementById('intro').style.display = 'none';
+                document.getElementById('preprocessing').style.display = 'none';
+                document.getElementById('binning').style.display = 'none';
+                document.getElementById('sentimentAnalysis').style.display = 'none';
+                document.getElementById('statsAnalysis').style.display = 'none';
+                document.getElementById('outlierDetection').style.display = 'none';
+                document.getElementById('dataCleaning').style.display = 'none';
+                document.getElementById('correlations').style.display = 'inline';
+                document.getElementById('clusterAnalysis').style.display = 'none';
+                document.getElementById('associationRules').style.display = 'none';
+                document.getElementById('predictiveAndHypothesis').style.display = 'none';
+                document.getElementById('conclusion').style.display = 'none';
+                document.getElementById('clk_intro').parentNode.classList.remove('active');
+                document.getElementById('clk_preprocessing').parentNode.classList.remove('active');
+                document.getElementById('clk_binning').parentNode.classList.remove('active');
+                document.getElementById('clk_sentimentAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_statsAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_outlierDetection').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.remove('active');
+                document.getElementById('clk_correlations').parentNode.classList.add('active');
+                document.getElementById('clk_clusterAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_associationRules').parentNode.classList.remove('active');
+                document.getElementById('clk_predictiveAndHypothesis').parentNode.classList.remove('active');
+                document.getElementById('clk_conclusion').parentNode.classList.remove('active');
+            }
+            else if (id == "clk_clusterAnalysis") {
+                document.getElementById('intro').style.display = 'none';
+                document.getElementById('preprocessing').style.display = 'none';
+                document.getElementById('binning').style.display = 'none';
+                document.getElementById('sentimentAnalysis').style.display = 'none';
+                document.getElementById('statsAnalysis').style.display = 'none';
+                document.getElementById('outlierDetection').style.display = 'none';
+                document.getElementById('dataCleaning').style.display = 'none';
+                document.getElementById('correlations').style.display = 'none';
+                document.getElementById('clusterAnalysis').style.display = 'inline';
+                document.getElementById('associationRules').style.display = 'none';
+                document.getElementById('predictiveAndHypothesis').style.display = 'none';
+                document.getElementById('conclusion').style.display = 'none';
+                document.getElementById('clk_intro').parentNode.classList.remove('active');
+                document.getElementById('clk_preprocessing').parentNode.classList.remove('active');
+                document.getElementById('clk_binning').parentNode.classList.remove('active');
+                document.getElementById('clk_sentimentAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_statsAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_outlierDetection').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.remove('active');
+                document.getElementById('clk_correlations').parentNode.classList.remove('active');
+                document.getElementById('clk_clusterAnalysis').parentNode.classList.add('active');
+                document.getElementById('clk_associationRules').parentNode.classList.remove('active');
+                document.getElementById('clk_predictiveAndHypothesis').parentNode.classList.remove('active');
+                document.getElementById('clk_conclusion').parentNode.classList.remove('active');
+            }
+            else if (id == "clk_associationRules") {
+                document.getElementById('intro').style.display = 'none';
+                document.getElementById('preprocessing').style.display = 'none';
+                document.getElementById('binning').style.display = 'none';
+                document.getElementById('sentimentAnalysis').style.display = 'none';
+                document.getElementById('statsAnalysis').style.display = 'none';
+                document.getElementById('outlierDetection').style.display = 'none';
+                document.getElementById('dataCleaning').style.display = 'none';
+                document.getElementById('correlations').style.display = 'none';
+                document.getElementById('clusterAnalysis').style.display = 'none';
+                document.getElementById('associationRules').style.display = 'inline';
+                document.getElementById('predictiveAndHypothesis').style.display = 'none';
+                document.getElementById('conclusion').style.display = 'none';
+                document.getElementById('clk_intro').parentNode.classList.remove('active');
+                document.getElementById('clk_preprocessing').parentNode.classList.remove('active');
+                document.getElementById('clk_binning').parentNode.classList.remove('active');
+                document.getElementById('clk_sentimentAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_statsAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_outlierDetection').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.remove('active');
+                document.getElementById('clk_correlations').parentNode.classList.remove('active');
+                document.getElementById('clk_clusterAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_associationRules').parentNode.classList.add('active');
+                document.getElementById('clk_predictiveAndHypothesis').parentNode.classList.remove('active');
+                document.getElementById('clk_conclusion').parentNode.classList.remove('active');
+            }
+            else if (id == "clk_predictiveAndHypothesis") {
+                document.getElementById('intro').style.display = 'none';
+                document.getElementById('preprocessing').style.display = 'none';
+                document.getElementById('binning').style.display = 'none';
+                document.getElementById('sentimentAnalysis').style.display = 'none';
+                document.getElementById('statsAnalysis').style.display = 'none';
+                document.getElementById('outlierDetection').style.display = 'none';
+                document.getElementById('dataCleaning').style.display = 'none';
+                document.getElementById('correlations').style.display = 'none';
+                document.getElementById('clusterAnalysis').style.display = 'none';
+                document.getElementById('associationRules').style.display = 'none';
+                document.getElementById('predictiveAndHypothesis').style.display = 'inline';
+                document.getElementById('conclusion').style.display = 'none';
+                document.getElementById('clk_intro').parentNode.classList.remove('active');
+                document.getElementById('clk_preprocessing').parentNode.classList.remove('active');
+                document.getElementById('clk_binning').parentNode.classList.remove('active');
+                document.getElementById('clk_sentimentAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_statsAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_outlierDetection').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.remove('active');
+                document.getElementById('clk_correlations').parentNode.classList.remove('active');
+                document.getElementById('clk_clusterAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_associationRules').parentNode.classList.remove('active');
+                document.getElementById('clk_predictiveAndHypothesis').parentNode.classList.add('active');
+                document.getElementById('clk_conclusion').parentNode.classList.remove('active');
+            }
+            else if (id == "clk_conclusion") {
+                document.getElementById('intro').style.display = 'none';
+                document.getElementById('preprocessing').style.display = 'none';
+                document.getElementById('binning').style.display = 'none';
+                document.getElementById('sentimentAnalysis').style.display = 'none';
+                document.getElementById('statsAnalysis').style.display = 'none';
+                document.getElementById('outlierDetection').style.display = 'none';
+                document.getElementById('dataCleaning').style.display = 'none';
+                document.getElementById('correlations').style.display = 'none';
+                document.getElementById('clusterAnalysis').style.display = 'none';
+                document.getElementById('associationRules').style.display = 'none';
+                document.getElementById('predictiveAndHypothesis').style.display = 'none';
+                document.getElementById('conclusion').style.display = 'inline';
+                document.getElementById('clk_intro').parentNode.classList.remove('active');
+                document.getElementById('clk_preprocessing').parentNode.classList.remove('active');
+                document.getElementById('clk_binning').parentNode.classList.remove('active');
+                document.getElementById('clk_sentimentAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_statsAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_outlierDetection').parentNode.classList.remove('active');
+                document.getElementById('clk_dataCleaning').parentNode.classList.remove('active');
+                document.getElementById('clk_correlations').parentNode.classList.remove('active');
+                document.getElementById('clk_clusterAnalysis').parentNode.classList.remove('active');
+                document.getElementById('clk_associationRules').parentNode.classList.remove('active');
+                document.getElementById('clk_predictiveAndHypothesis').parentNode.classList.remove('active');
+                document.getElementById('clk_conclusion').parentNode.classList.add('active');
+            }
+        }       
+
+    </script>
+</head>
+<body>
+
+    <!--<img src="../../../Images/Banner.JPG" style="width:100%" />-->
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../../../ProjectsHome.html" id="nav_Projects">Projects</a></li>
+                    <li><a href="../../../VizHome.html" id="nav_Viz">Visualizations</a></li>
+                    <li><a href="../../../ResumeHome.html" id="nav_Resume">Resume</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>&nbsp;&nbsp;ANLY - 501
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#" id="clk_intro" onclick="showSection(id)">Introduction</a></li>
+                    <li><a href="#" id="clk_preprocessing" onclick="showSection(id)">Preprocessing</a></li>
+                    <li><a href="#" id="clk_binning" onclick="showSection(id)">Binning</a></li>
+                    <li><a href="#" id="clk_sentimentAnalysis" onclick="showSection(id)">Sentiment Analysis</a></li>
+                    <li><a href="#" id="clk_statsAnalysis" onclick="showSection(id)">Statistical Analysis</a></li>
+                    <li><a href="#" id="clk_outlierDetection" onclick="showSection(id)">Outlier Detection</a></li>
+                    <li><a href="#" id="clk_dataCleaning" onclick="showSection(id)">Data Cleaning</a></li>
+                    <li><a href="#" id="clk_correlations" onclick="showSection(id)">Correlations</a></li>
+                    <li><a href="#" id="clk_clusterAnalysis" onclick="showSection(id)">Cluster Analysis</a></li>
+                    <li><a href="#" id="clk_associationRules" onclick="showSection(id)">Association Rules</a></li>
+                    <li><a href="#" id="clk_predictiveAndHypothesis" onclick="showSection(id)">Predictive Analysis</a></li>
+                    <li><a href="#" id="clk_conclusion" onclick="showSection(id)">Conclusion</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="row">
+
+        <div class="col-md-2">
+            <div class="navbar navbar-fixed-left">
+                <div class="list-group" style="z-index:5">
+                    <a href="/Projects/YelpWeather/Project1/Project1.html" class="list-group-item list-group-item-action">
+                        <i class="fa fa-file-o" aria-hidden="true"></i>&nbsp;Project 1
+                    </a>
+                    <a href="#" class="list-group-item" style="background-color: #404040; color:white;">
+                        <i class="fa fa-file-o" aria-hidden="true"></i>&nbsp;Project 2
+                    </a>
+                    <a href="/Projects/YelpWeather/Project3/Project3.html" class="list-group-item list-group-item-action">
+                        <i class="fa fa-file-o" aria-hidden="true"></i>&nbsp;Project 3
+                    </a>
+                </div>
+                <br /><br />
+                <ul class="list-group">
+                    <li class="list-group-item" style="background-color: #404040; color:white;"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;The Team</li>
+                    <li class="list-group-item list-group-item-info"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;April Chung</li>
+                    <li class="list-group-item list-group-item-info"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;Kendra Gedney</li>
+                    <li class="list-group-item list-group-item-info"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;Yipin Lu</li>
+                    <li class="list-group-item list-group-item-info"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;Ratnadeep Mitra</li>
+                </ul>
+                <br /><br />
+                <form action="https://drive.google.com/a/georgetown.edu/file/d/1GrSE3bVzfP-TsCzBDOQgAFbYliFcGiT6/view?usp=sharing">
+                    <input type="submit" value="Go to files" class="btn" style="background-color: #404040; color:white; width:100%; cursor:pointer" />
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-10">
+
+            <div id="writeup" style="padding-right:30px">
+
+                <div style="font-size: 175%;"><u>The Relationship between Weather and Yelp Reviews</u></div><br />
+
+                <div id="intro">
+                    <h3>1.  Introduction</h3><br />
+                    <div style="text-align: justify;">
+                        Does the weather affect people's moods so significantly that they will rate restaurants lower or higher? In this project, we use Yelp and NOAA weather data to investigate the relationship between the weather and restaurant reviews. In the previous report, we explained our data collection process - pulling from both Yelp and NOAA.gov. That process resulted in ~17,000 Yelp reviews from ~5,800 restaurants across the US, and daily weather measures (precipitation, snow and temperature) from 7,711 weather stations across the US.
+                        <br /><br />
+                        In this project, we begin by merging the datasets (by latitude and longitude) to explore the relationship between the reviews and the weather on that the day of the review.  From there, we compute sentiment analysis on the text reviews and perform exploratory and predictive analysis on the data. We do not find a strong correlation between Yelp reviews and weather. Using machine learning classification methods, we cannot predict the rating based on weather and location better than random chance. Although we cannot support our principle data science question, we find some interesting results.
+                        <br /><br />
+                        The project is divided into the following sections. Section 2 explains the Preprocessing, following by binning in Section 3, sentiment analysis in Section 4, and Basic Statistical Analysis in Section 5. From there, we will examine histograms and outliers in Section 6 and review our data cleaning in Section 7. Next, we compute correlations and examine scatterplots of the data in Section 8. In Section 9 we discuss Clustering. In Section 10, we compute Association Rules. Finally, in Section 11, we compute Hypothesis testing.
+                    </div><br />
+                </div>
+
+                <div id="preprocessing" style="display:none">
+                    <h3>2.  Preprocessing: Merging weather and Yelp data</h3><br />
+                    <div style="text-align: justify;">
+                        In order to move forward with our analysis, we performed additional preprocessing. In particular, we merged the three cleaned datasets from the first project, into one dataset, <b>merged_data.csv</b>.
+                        <br /><br />
+                        The input data sets consist of three parts. The first is the daily weather data, which contains observed values of each weather station (<b>2017_Weather_CleanData.csv</b>). The second is restaurant review data set, which contains the restaurant ids, review ratings, review texts and time of reviews (<b>Restaurant_Detail_CleanData.csv</b>). The third is the detailed information of each restaurant, such as latitude, longitude, average rating and restaurant id (<b>Restaurant_Reviews_CleanData.csv</b>).
+                        <br /><br />
+                        We first use the <i>restaurant_id</i> column as the key to merge the restaurant reviews and restaurant details. Thus, we get a data set that contains the latitude, longitude and time for each review. Then we use the package <i>geopy</i> to calculate the distances between restaurants and stations. To decrease the complexity, we just calculate the distances between in a range of +/- 1 latitude and longitude, which is approximately 69 miles for latitude or longitude, for each restaurant. Then we select the closest station's data that have observed values on the same day as each review. We dropped 19 reviews because we could not find a close enough weather station with data for that day. After that, we output a file named <b>merged_data.csv</b>. This process takes about 5 minutes, and is named <b>Preprocessing.py</b>.
+                    </div><br />
+                </div>
+
+                <div id="binning" style="display:none">
+                    <h3>3.  Binning</h3><br />
+                    <div style="text-align: justify;">
+                        We binned three attributes to assist in our analysis. Each bin (<i>region</i>, (<i>season</i>, and (<i>TCAT</i>) is described below.
+                        <br /><br />
+                        <h4><i>3.1   Region Bins</i></h4>
+                        <div style="text-align: justify;">
+                            We grouped the regions of the US into 9 bins, trying to keep states with similar climates together. This bin allows for region-level analysis which is important when working with a widespread dataset. Review counts by region are below, as well as the definition in Table 3.1. We dropped 8 reviews that did not fall into the US, which is discussed further in Section 5.
+                            <br /><br />
+                            <center>
+                                <img src="Table3.1.png" />
+                            </center>
+                        </div><br />
+                        <h4><i>3.2   Season Bins</i></h4>
+                        <div style="text-align: justify;">
+                            Next, we binned the seasons, based on the 2017 calendar, up until the most recent review in the dataset, which is from 10/4/17. Again, we passed explicit bins to the data. The majority are from Summer. Results are below in Table 3.2.
+                            <br /><br />
+                            <center>
+                                <img src="Table3.2.png" />
+                            </center>
+                        </div><br />
+                        <h4><i>3.3   Temperature Bins</i></h4>
+                        <div style="text-align: justify;">
+                            Finally, we created <i>TCAT</i> by binning the numerical variable <i>TAVG</i> into 5 bins by passing the range of temperatures explicitly. As shown in Table 3.3, the majority of reviews fall into the Mild category at 16-30&deg;C, as expected since the majority of the reviews are from Summer. This bin makes working with the temperature data easier, and in particular, makes excluding extreme temperatures easier.
+                            <br /><br />
+                            <center>
+                                <img src="Table3.3.png" />
+                            </center>
+                        </div><br />
+                    </div><br />
+                </div>
+
+                <div id="sentimentAnalysis" style="display:none">
+                    <h3>4.  Sentiment Analysis</h3><br />
+                    <div style="text-align: justify;">
+                        To further analyze the Yelp data, we performed sentiment analysis on the text of the reviews. We used the Python package <i>NLTK</i> and the library <i>TextBlob</i>, which perform the necessary preparation to determine sentiment, including lemmatization and tokenization. <i>TextBlob</i> classified each review as: Positive, Neutral, or Negative. It also created the attribute <i>sentiment_polarity</i>, which is a continuous variable from 1 to -1 which will be used in later analysis. The sentiment analysis classifies 83% of all reviews as positive, as show below in Table 4.1.
+                        <br /><br />
+                        <center>
+                            <img src="able4.1.png" />
+                        </center>
+                        In Table 4.2 below, the sentiment analysis is compared with the given Yelp rating. The sentiment analysis classifies 88% of 5-star reviews as Positive. On the other hand, the sentiment analysis classifies 46% of 1-star reviews as Negative. The alignment is not perfect, suggesting some performance issues in the sentiment analysis. The correlation is explored further in Section 8.
+                        <br /><br />
+                        <center>
+                            <img src="Table4.2.png" />
+                        </center>
+                        We generated a word cloud based on the frequency of words in the reviews using the <i>wordcloud</i> package in <i>NLTK</i>. The largest words (and thus most common) tend to be positive, for example, "good", "great", and "love". This is expected as the majority of reviews were classified as positive (83%), and given 5-star reviews (55%).
+                        <br /><br />
+                        <center>
+                            Figure 4.1: Yelp Reviews Wordcloud<br />
+                            <img src="all_WordCloud.png" />
+                        </center>
+                    </div><br />
+                </div>
+
+                <div id="statsAnalysis" style="display:none">
+                    <h3>5.  Basic Statistical Analysis</h3><br />
+                    <div style="text-align: justify;">
+                        First, we analyze the weather attributes for the day and location of the Yelp reviews. The average temperature is 21.3&deg;C (70.3&deg;F). The maximum temperature is high, at 40.3&deg;C/104.5&deg;F, however, in Section 6 this is determined not to be an outlier. The average precipitation is 2.78 mm. The maximum is high, at 206.2 mm (8.1 inches). This will also be discussed in Section 6 and determined not to be an outlier. For most days, the precipitation is zero. For <i>SNOW</i>, the average is 0.1, but again for most days it is missing or zero.
+                        <br /><br />
+                        <center>
+                            <img src="Table5.1.png" />
+                        </center>
+                        Next, we analyze the distance and location attributes in Table 5.2. <i>Dist</i> is the distance in miles from the restaurant location to its closest weather station. The maximum distance allowed was 69 miles to assure that the station and restaurant are close enough to have similar weather. The average station is 6.6 miles away. The furthest is 64.7 miles. The <i>state</i> attribute shows that we have Yelp review data for restaurants in 47 different states, with the most from California. The states that are not included in this analysis are: Montana, South Dakota, and North Dakota. To obtain the Yelp data, we passed the top 300 most-populous counties to the Yelp API, which did not include any counties from those three states.
+                        <br /><br />
+                        <center>
+                            <img src="Table5.2.png" />
+                        </center>
+                        Next, we consider summary statistics for the restaurant and review attributes in Table 5.3. The median Yelp review rating, <i>review_rating</i>, is 5-stars. At the restaurant-level, the median rating, <i>rest_rating</i>, is 4.5-stars. The review ratings are <i>int64</i>, since the only possible values are 1-5 stars, while the restaurant ratings are <i>float64</i> since they are averaged over many reviews. The average restaurant is also highly-reviewed, with 236 reviews, as shown for <i>review_coun</i>t. The <i>price</i> attribute is a categorical variable, with the most common restaurant being '$$' in price.
+                        <center>
+                            <img src="Table5.3.png" style="width:80%" />
+                        </center>
+                        Lastly, we analyze the attributes from the sentiment analysis. The most common sentiment is positive, at 1, with an average polarity of 0.3. The standard deviation of polarity is 0.3.
+                        <center>
+                            <img src="Table5.4.png" style="width:40%" />
+                        </center>
+                    </div><br />
+                </div>
+
+                <div id="outlierDetection" style="display:none">
+                    <h3>6.  Outlier Detection and Histograms</h3><br />
+                    <div style="text-align: justify;">
+                        The Yelp data attributes do not have outliers, by their definitions. For example, the rating range is set at 0 to 5-stars, so it impossible to have outliers.  However, we checked the weather data for outliers.
+                        <br /><br />
+                        For temperature, <i>TAVG</i>, the range is from -20.6 &deg;C to 40.3 &deg;C. We checked the extreme values by hand to determine if they were outliers. The maximum temperature is 40.3&deg;C/104.5&deg;F. We confirmed that it came from an Arizona weather station in July, which is not unusual for that location and time of year. For the minimum temperature, -20.6&deg;C/-5&deg;F, we confirmed that it came from a Minnesota weather station in January, also not unusual.  The below histogram in Figure 6.1 illustrates the spread and left-skew of <i>TAVG</i>.
+                        <br /><br />
+                        <center>
+                            <figcaption>Figure 6.1: Histogram of <i>TAVG</i></figcaption>
+                            <img src="Fig6.1.png" />
+                        </center>
+                        <br /><br />
+                        We also checked precipitation values for outliers. The range of <i>PRCP</i> is from 0 to 206.2mm (8.1 inches). The maximum value was checked by hand. It was confirmed that it came from a Florida weather station in August, not unusual for that location and time of year. It did not rain on the majority of days, explaining the large spike at zero in the below histogram, Figure 6.2.
+                        <br /><br />
+                        <center>
+                            <figcaption>Figure 6.2: Histogram of <i>PRCP</i></figcaption>
+                            <img src="Fig6.2.png" />
+                        </center>
+                        <br /><br />
+                        For the snow data, the majority is missing or zero, which limits the analysis that can be done with it. However, there are 34 reviews for which there is reported snowfall. The range of values is 0 to 178 mm (7.0 inches). The maximum snowfall came from a New York weather station in January.  The histogram, Figure 6.3, is below, which only includes days with snowfall greater than zero.
+                        <br /><br />
+                        <center>
+                            <figcaption>Figure 6.3: Histogram of <i>SNOW</i></figcaption>
+                            <img src="Fig6.3.png" />
+                        </center>
+                        <br /><br />
+                        To sum, although extreme values exist in the weather data, we feel confident in their accuracy and decided not to drop any.
+                    </div><br />
+                </div>
+
+                <div id="dataCleaning" style="display:none">
+                    <h3>7.  Missing Values and Data Cleaning</h3><br />
+                    <div style="text-align: justify;">
+                        In the previous project, we discussed missing values. In the Yelp data, only one restaurant had missing latitude and longitude - we researched the restaurant "Milya cafe" to determine its coordinates. We wrote code to repair that row with the appropriate data. Other missing values were not a problem, as those columns were not necessary for analysis. For the weather data, we dropped rows with missing values for temperature and precipitation since those values are necessary to complete our analysis.
+                        <br /><br />
+                        To prepare for this project's analysis, we performed some extra data cleaning. First, we dropped 19 reviews for which we could not match with a close weather station, as explained in Section 2. Second, when binning by region, we dropped 8 reviews that were not from a restaurant in a US state. In the first project, we limited the data by US county, however, a few Canadian and Mexican restaurants made it into our data. To sum, after the additional cleaning we dropped a total of 27 reviews, or 0.17% of our data.
+                    </div><br />
+                </div>
+
+                <div id="correlations" style="display:none">
+                    <h3>8.  Scatterplots and Correlations</h3><br />
+                    <div style="text-align: justify;">
+                        In this section, we explore the correlation among three attributes: <i>review_rating</i>, <i>TAVG</i>, <i>sentiment_polarity</i>. <i>Review_rating</i> is the given Yelp rating and <i>sentiment_polarity</i> its computed sentiment. <i>TAVG</i> is the local temperature on the day the review was written. The correlation matrix is below in Table 8.1. The most correlated attributes, with a coefficient of 0.314, are rating and sentiment, as expected. Neither the rating nor the sentiment are strongly correlated with <i>TAVG</i>.
+                        <br /><br />
+                        <center>
+                            <img src="Table8.1.png" />
+                        </center>
+                        <br /><br />
+                        Figure 8.1 shows the scatterplot. The correlation, although weak, is visible. As the Yelp rating moves to 5-stars, the polarity of the sentiment also increases.
+                        <br /><br />
+                        <center>
+                            <figcaption>Figure 8.1: Scatterplot of <i>sentiment_polarity</i> and <i>review_rating</i></figcaption>
+                            <img src="Fig8.1.png" />
+                        </center>
+                        <br /><br />
+                        Next, we plot <i>TAVG</i> and <i>sentiment_polarity</i> in Figure 8.2. The correlation is weak, across all regions.
+                        <br /><br />
+                        <center>
+                            <figcaption>Figure 8.2: Scatterplot of <i>sentiment_polarity</i> and <i>TAVG</i></figcaption>
+                            <img src="Fig8.2.png" />
+                        </center>
+                        <br /><br />
+                        Lastly, we plot <i>TAVG</i> and <i>review_rating</i> in Figure 8.3. Again, the correlation is weak, suggesting the temperature does not have much of an effect on Yelp ratings.
+                        <br /><br />
+                        <center>
+                            <figcaption>Figure 8.3: Scatterplot of <i>review_rating</i> and <i>TAVG</i></figcaption>
+                            <img src="Fig8.3.png" />
+                        </center>
+                    </div><br />
+                </div>
+
+                <div id="clusterAnalysis" style="display:none">
+                    <h3>9.  Cluster Analysis</h3><br />
+                    <div style="text-align: justify;">
+                        We used three clustering techniques to analyze our data. Each method (KMeans, DBScan and Hierarchical) is described below. Using KMeans and DBScan we analyzed the relationship among four key attributes (<i>rest_lat</i>, <i>rest_long</i>, <i>TAVG</i> and <i>sentiment_polarity</i>). We used Hierarchical Clustering to group the reviews by US region.
+                        <br /><br />
+                        <h4><i>9.1   KMeans Clustering</i></h4>
+                        <div style="text-align: justify;">
+                            In clustering, the goal is to detect high similarity and low similarity within a group. We created a group with the restaurant’s latitude (<i>rest_lat</i>) and longitude (<i>rest_long</i>), average temperature (<i>TAVG</i>) of the day on which the review was posted and the sentiment polarity (<i>sentiment_polarity</i>) of the review. Our goal was to determine if these variables are interrelated and form a pattern.  We used the KMeans clustering method with <i>k=3</i>. This results in a Silhouette score of 0.316.  As shown in the PCA projection in Figure 9.1, there are some outliers (in pale yellow). The clusters are not well separated, indicating the KMeans clustering analysis is not appropriate for this data.
+                            <br /><br />
+                            <center>
+                                <figcaption>Figure 9.1: KMeans Clustering</figcaption>
+                                <img src="KMeans_Clusters_3.jpg" style="width:80%" />
+                            </center>
+                        </div><br />
+                        <h4><i>9.2   DBSCAN Clustering</i></h4>
+                        <div style="text-align: justify;">
+                            We used the same group of attributes for DBSCAN - <i>rest_lat</i>, <i>rest_long</i>, <i>TAVG</i>, and <i>sentiment_polarity</i>. Since DBSCAN is a density-based spatial clustering algorithm, it formed better clusters than KMeans. The PCA projection, in Figure 9.2, indicates that all the data points in the group were similar and thus form one big cluster. The outliers were properly detected (in purple and pale yellow). The cluster and the outliers are well-separated justifying the high Silhouette score of 0.626.
+                            <br /><br />
+                            <center>
+                                <figcaption>Figure 9.2: DBSCAN Clustering</figcaption>
+                                <img src="DBSCAN.jpg" style="width:80%" />
+                            </center>
+                        </div><br />
+                        <h4><i>9.3   Hierarchical  Clustering</i></h4>
+                        <div style="text-align: justify;">
+                            Different regions of the US may use different vocabulary when writing Yelp reviews. This could be related to regional cuisine, for example, grits in the South or lobster in New England. It could also be related to the language that reviewers use, for example, describing something as "wicked" in New England. We used hierarchical clustering on the text of the reviews by region to determine their relationship. Using cosine similarity, the clustering resulted in three clusters from the nine regions. The Silhouette score is 0.58.
+                            <br /><br />
+                            The dendrogram, in Figure 9.3, shows that the most similar reviews are from the Mid-Atlantic and the Southeast, which makes sense since the states from those regions are adjacent. The Midwest, Mountain and New England regions stand apart as being the most different.
+                            <br /><br />
+                            <center>
+                                <figcaption>Figure 9.3: Dendrogram</figcaption>
+                                <img src="HierarchicalClustering.jpg" style="width:90%" />
+                            </center>
+                        </div><br />
+                    </div><br />
+                </div>
+
+                <div id="associationRules" style="display:none">
+                    <h3>10.  Association Rules</h3><br />
+                    <div style="text-align: justify;">
+                        Using association rules, we examined the words in 5-star reviews, specifically food-related words.  First, we subsetted the data on 5-star reviews. Next, we imported a dataset of common food words (food words dataset sourced from <i>wordnet</i> within NLTK). Using the Apriori Principle, we first found the most frequent food words, as shown in Table 10.1. Chicken is the most frequently used word, which is not surprising given its prevalence in American cuisine.
+                        <br /><br />
+                        <center>
+                            <img src="Table10.1.png" style="width:40%" />
+                        </center>
+                        Next, we found the support level of the itemsets based on the most frequent words. The top 20, sorted by support level, are below in Table 10.2.
+                        <br /><br />
+                        <center>
+                            <img src="Table10.2.png" />
+                        </center>
+                        Finally, we computed seven association rules based on three different support levels (0.25%, 0.20%, 0.10%). Results are in Table 10.3. The support for the first rule, {chicken}->{pork}, is 0.276%, meaning 0.276% of 5-star reviews mention both chicken and pork. The confidence is 6.1%, meaning 6.1% of all reviews that mention chicken also mention pork.
+                        <br /><br />
+                        <center>
+                            <img src="Table10.3.png" />
+                        </center>
+                    </div><br />
+                </div>
+
+                <div id="predictiveAndHypothesis" style="display:none">
+                    <h3>11.  Predictive Analysis and Hypothesis Testing</h3><br />
+                    <div style="text-align: justify;">
+                        We tested three hypotheses using seven different techniques to analyze our data. Each method (KMeans, Hierarchical, and DBScan) is described below.
+                        <br /><br />
+                        <h4><i>11.1   Hypothesis 1: Does the average Yelp rating differ significantly by region? (ANOVA)</i></h4>
+                        <div style="text-align: justify;">
+                            To test this hypothesis, we used an ANOVA 1-way test. Looking at the ratings by region, there is a seemingly small difference between them. Reviews from the Southeast are the highest on average, while those from New England are the lowest.
+                            <br /><br />
+                            <center>
+                                <img src="Table11.1.png" />
+                            </center>
+                            <br /><br />
+                            After running the test, the resulting p-value is extremely small, at 5.95e-5. Therefore, we reject the null hypothesis and determine that there is a significant difference in the means of the ratings by region. This result supports the decision to group the data by region, since there is a significant difference.
+                        </div><br />
+                        <h4><i>11.2  Hypothesis 2: Does the degree of rain and average temperature affect the sentiment of Yelp reviews? (Linear Regression)</i></h4>
+                        <div style="text-align: justify;">
+                            First, we select the subset of data that contains rainy days' information only. Then we select data from several different states to conduct multivariate linear regression. The X attributes are <i>PRCP </i>and <i>TAVG</i>. The Y attribute is <i>sentiment_polarity</i>. We split the data into train and test datasets. Then we build a multivariate linear regression model based on the train dataset.  Next, we use the test dataset to examine the performance of the model. The performance of this model is poor. The R<sup>2</sup> is -0.0061766461038, which shows there is no relationship between X (weather attributes) and Y (<i>sentiment_polarity</i>). The 3D plot below in Figure 11.1 also illustrates the same point.
+                            <br /><br />
+                            <center>
+                                <figcaption>Figure 11.1: Multivariate Linear Regression</figcaption>
+                                <img src="Regression.png" />
+                            </center>
+                            <br /><br />
+                            Then we select five states, which are CA, VA, NE, NY and AL, to build state-level multivariate linear regression models.  The performance of these models is also poor. For example, the R<sup>2</sup> for VA is only 0.0585879846678. Therefore, even when analyzing a single state, we cannot determine a relationship between sentiment and weather.
+                            <br /><br />
+                            <center>
+                                <img src="Table11.2.png" />
+                            </center>
+                        </div><br />
+                        <h4><i>11.3  Hypothesis 3: Can the rating be predicted from weather and location attributes: TAVG, PRCP, region_idx? (ML Algorithms)</i></h4>
+                        <div style="text-align: justify;">
+                            To test whether we could predict the rating based on location and weather alone, we used five different machine learning techniques: k-Nearest Neighbor (kNN), Decision Tree (CART), Naive Bayes (NB), Support Vector Machines (SVM), and Random Forest.
+                            <br /><br />
+                            First, we grouped the rating into two classes: High (4-5 stars) and Low (0-3 stars). Next, we applied each machine learning algorithm. The results for cross-validation are below in Table 11.4. Naive Bayes and SVC performed the best in cross-validation, with ~80% accuracy.
+                            <br /><br />
+                            <center>
+                                <img src="Table11.4.png" />
+                            </center>
+                            <br /><br />
+                            Next, we compare the confusion matrix results for each method.
+                            <br /><br />
+                            <i>kNN</i>
+                            <br />
+                            The kNN algorithm works by setting a value for k, we the default k=5, and then classifying data through a Nearest Neighbor algorithm.  The algorithm finds the distance of the point to the nearest five clusters, and then classifies based on the classification of the closest cluster. The confusion matrix results are below in Table 11.5. The kNN correctly classified (the true positives) 2338 points from the test data.
+                            <br /><br />
+                            <center>
+                                <img src="Table11.5.png" />
+                            </center>
+                            <br /><br />
+                            <i>CART</i>
+                            <br />
+                            CART is a decision tree classifying method. It works by splitting the features until it reaches a pure node, and then uses the resulting tree to classify. The confusion matrix results are below in Table 11.6. This method performed slightly worse than kNN for identifying true positives, but better at identifying true negatives (low ratings).
+                            <br /><br />
+                            <center>
+                                <img src="Table11.6.png" />
+                            </center>
+                            <br /><br />
+                            <i>Naive Bayes</i>
+                            <br />
+                            Naive Bayes is a probability-based classifying method. It assumes independence among the features, which does not fit with our data since weather features are interdependent. However, we used the method and results are below in Table 11.7. The NB classified all points as having a High rating.
+                            <br /><br />
+                            <center>
+                                <img src="Table11.7.png" />
+                            </center>
+                            <br /><br />
+                            <i>SVC</i>
+                            <br />
+                            SVC works by maximizing the margin of a support vector through the data.  This method can handle high dimensional data, in our case we are using just 4-dimensions. SVC also classified all points as positive, or as High rating as seen in Table 11.8.
+                            <br /><br />
+                            <center>
+                                <img src="Table11.8.png" />
+                            </center>
+                            <br /><br />
+                            <i>RF</i>
+                            <br />
+                            Random Forest (RF) is a method that uses an ensemble of decision trees. This method, similar to CART, performed relatively well. It correctly classified 2316 points as true positive, and 57 points as true negative.
+                            <br /><br />
+                            <center>
+                                <img src="Table11.9.png" />
+                            </center>
+                            <br /><br />
+                            Finally, we generated the ROC curve for each method. The dotted line indicates the results if the classification was left to random chance. Our machine learning algorithms just barely outperform the dotted line. This indicates that we cannot predict the rating by weather and location alone better than random chance.
+                            <br /><br />
+                            <center>
+                                <figcaption>Figure 11.2: ROC curves for all ML methods</figcaption>
+                                <img src="ROC.jpg" />
+                            </center>
+                        </div><br />
+                    </div><br />
+                </div>
+
+                <div id="conclusion" style="display:none">
+                    <h3>12.  Conclusion</h3><br />
+                    <div style="text-align: justify;">
+                        To conclude, we did not find any relationship between the weather and Yelp reviews or sentiment through this analysis. However, we did uncover regional differences in Yelp reviews, as shown in the dendrogram in Section 9 and the hypothesis test in Section 11. We also analyzed the language used in the Yelp reviews, resulting in the sentiment analysis in Section 4 and the association rules in Section 10.
+                    </div><br />
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="navbar navbar-fixed-bottom" id="footer" style="background-color: #ffffb3; height:40px; font-family:Verdana, Geneva, Tahoma, sans-serif; vertical-align:middle">
+        <div id="footerView" class="site-footer">
+            <center>
+                <div style="padding-top:10px"><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>&nbsp;&nbsp;Ratnadeep Mitra</div>
+            </center>
+        </div>
+    </div>
+
+</body>
+</html>

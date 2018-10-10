@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="css/Home.css" rel="stylesheet" />
+    <script src="js/Home.js"></script>
+
+    <link rel="icon" href="Images/RM-Logo.ico" />
+    <title>Ratnadeep Mitra</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../ProjectsHome.html" id="nav_Projects">Projects</a></li>
+                    <li class="active"><a href="../../../VizHome.html" id="nav_Viz">Visualizations</a></li>
+                    <li><a href="../../../ResumeHome.html" id="nav_Resume">Resume</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
+    <div id="writeup" style="padding-right:30px; padding-left: 30px">
+
+        <div style="font-size: 175%;"><u>FIFA 18 Player Data</u></div><br />
+
+        <h3><i>About the Data</i></h3><br />
+        <div style="text-align: justify;">
+            The FIFA 18 Player Data is available on Kaggle.
+            It is a public data set and I downloaded it from <a href="https://www.kaggle.com/kevinmh/fifa-18-more-complete-player-dataset/data">here</a>.
+            It is the complete data set of players in FIFA 18. It contains 17995 rows and 185 columns. There are 253 records in the dataset with no "club" information.
+            Since I am using the "club" column for the purpose of analysis, the records with missing information have been removed from the data set.
+        </div>
+        <br />
+
+        <center>
+            <div class='tableauPlaceholder' id='viz1526959555307' style='position: relative'><noscript><a href='#'><img alt='Exploratory Analyis on FIFA 18 Data ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;ExploratoryAnalysisonFIFA18Data&#47;FifaStory&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ExploratoryAnalysisonFIFA18Data&#47;FifaStory' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;ExploratoryAnalysisonFIFA18Data&#47;FifaStory&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>
+            <script type='text/javascript'>    var divElement = document.getElementById('viz1526959555307'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '1016px'; vizElement.style.height = '991px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+        </center>
+        <br />
+
+        <h3><i>Key Takeaways from the Visualization</i></h3>
+        <div style="text-align: justify;">
+            <ul>
+                <li>
+                    English Premier League is the highest paying soccer league in the world.
+                    It pays more than 57 times to a player with same overall skill in the Ukranian Super League and almost twice as more as German Bundesliga.
+                </li>
+                <li>A player's value tends to increase with wage. Although there quite a few players who have high value but do not draw high wage.</li>
+                <li>
+                    Wage and Value are well-correlated and they both follow an almost normal distribution with a peak at around 30.
+                    However, the Wage peaks again at around 40 as the Value remains low. This can due to the fact that there are many soccer players,
+                    who used to very successful in their prime and still draw a lot of money due to their big names. Their value, however, do not increase.
+                </li>
+                <li>Based on average overall skill, Spanish Primera Division seems to have the most talented players, followed by Ukranian Super League and German Bundesliga.</li>
+                <li>FC Barcelona, Real Madrid CF, FC Bayern Munich, Juventus, Manchester United and Chelsea are some of the highest paying soccer clubs.</li>
+            </ul>
+        </div>
+        <br />
+
+    </div>
+
+    <div class="navbar navbar-fixed-bottom" id="footer" style="background-color: #ffffb3; height:40px; font-family:Verdana, Geneva, Tahoma, sans-serif; vertical-align:middle">
+        <div id="footerView" class="site-footer">    
+            <center>
+                <div style="padding-top:10px"><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>&nbsp;&nbsp;Ratnadeep Mitra</div>
+            </center>
+        </div>
+    </div>
+
+</body>
+</html>

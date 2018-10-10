@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="css/Home.css" rel="stylesheet" />
+    <script src="js/Home.js"></script>
+
+    <link rel="icon" href="Images/RM-Logo.ico" />
+    <title>Ratnadeep Mitra</title>
+
+    <script>
+
+        function OpenNav(id) {
+            if (id == "nav_Projects") {
+                document.getElementById('nav_Projects').parentNode.classList.add('active');
+                document.getElementById('nav_Viz').parentNode.classList.remove('active');
+                document.getElementById('nav_Resume').parentNode.classList.remove('active');
+            }
+            else if (id == "nav_Viz") {
+                document.getElementById('nav_Projects').parentNode.classList.remove('active');
+                document.getElementById('nav_Viz').parentNode.classList.add('active');
+                document.getElementById('nav_Resume').parentNode.classList.remove('active');
+            }
+            else if (id == "nav_Resume") {
+                document.getElementById('nav_Projects').parentNode.classList.remove('active');
+                document.getElementById('nav_Viz').parentNode.classList.remove('active');
+                document.getElementById('nav_Resume').parentNode.classList.add('active');
+            }
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+    <img src="Images/Banner.JPG" style="width:100%" />
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="ProjectsHome.html" id="nav_Projects">Projects</a></li>
+                    <li><a href="VizHome.html" id="nav_Viz">Visualizations</a></li>
+                    <li class="active"><a href="ResumeHome.html" id="nav_Resume">Resume</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <center>
+        <embed src="Resume.pdf" style="height:1000px; width:80%;">
+    </center>
+
+
+
+    <!--<div class="navbar navbar-fixed-bottom" id="footer" style="background-color: #ffffb3; height:40px; font-family:Verdana, Geneva, Tahoma, sans-serif; vertical-align:middle">
+        <div id="footerView" class="site-footer">
+            <center>
+                <div style="padding-top:10px"><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>&nbsp;&nbsp;Ratnadeep Mitra</div>
+            </center>
+        </div>
+    </div>!-->
+
+
+
+</body>
+</html>

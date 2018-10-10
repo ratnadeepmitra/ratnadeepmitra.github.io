@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    
+        <style>
+            html, body { height: 100%; background-color:white; }
+            body { padding-top: 60px; }
+        </style>
+        
+        <script type="text/javascript">
+            
+            function showSection(id){
+                if(id == "clk_intro"){
+                    document.getElementById('intro').style.display = 'inline';
+                    document.getElementById('data').style.display = 'none';
+                    document.getElementById('sentimentAnalysis').style.display = 'none';
+                    document.getElementById('principalAnalysis').style.display = 'none';
+                    document.getElementById('regionalAnalysis').style.display = 'none';
+                    document.getElementById('networkAnalysis').style.display = 'none';
+                    document.getElementById('results').style.display = 'none';
+                    document.getElementById('conclusion').style.display = 'none';
+                    document.getElementById('presentation').style.display = 'none';
+                }
+                else if(id == "clk_data"){
+                    document.getElementById('intro').style.display = 'none';
+                    document.getElementById('data').style.display = 'inline';
+                    document.getElementById('sentimentAnalysis').style.display = 'none';
+                    document.getElementById('principalAnalysis').style.display = 'none';
+                    document.getElementById('regionalAnalysis').style.display = 'none';
+                    document.getElementById('networkAnalysis').style.display = 'none';
+                    document.getElementById('results').style.display = 'none';
+                    document.getElementById('conclusion').style.display = 'none';
+                    document.getElementById('presentation').style.display = 'none';
+                }
+                else if(id == "clk_sentimentAnalysis"){
+                    document.getElementById('intro').style.display = 'none';
+                    document.getElementById('data').style.display = 'none';
+                    document.getElementById('sentimentAnalysis').style.display = 'inline';
+                    document.getElementById('principalAnalysis').style.display = 'none';
+                    document.getElementById('regionalAnalysis').style.display = 'none';
+                    document.getElementById('networkAnalysis').style.display = 'none';
+                    document.getElementById('results').style.display = 'none';
+                    document.getElementById('conclusion').style.display = 'none';
+                    document.getElementById('presentation').style.display = 'none';
+                }
+                else if(id == "clk_principalAnalysis"){
+                    document.getElementById('intro').style.display = 'none';
+                    document.getElementById('data').style.display = 'none';
+                    document.getElementById('sentimentAnalysis').style.display = 'none';
+                    document.getElementById('principalAnalysis').style.display = 'inline';
+                    document.getElementById('regionalAnalysis').style.display = 'none';
+                    document.getElementById('networkAnalysis').style.display = 'none';
+                    document.getElementById('results').style.display = 'none';
+                    document.getElementById('conclusion').style.display = 'none';
+                    document.getElementById('presentation').style.display = 'none';
+                }
+                else if(id == "clk_regionalAnalysis"){
+                    document.getElementById('intro').style.display = 'none';
+                    document.getElementById('data').style.display = 'none';
+                    document.getElementById('sentimentAnalysis').style.display = 'none';
+                    document.getElementById('principalAnalysis').style.display = 'none';
+                    document.getElementById('regionalAnalysis').style.display = 'inline';
+                    document.getElementById('networkAnalysis').style.display = 'none';
+                    document.getElementById('results').style.display = 'none';
+                    document.getElementById('conclusion').style.display = 'none';
+                    document.getElementById('presentation').style.display = 'none';
+                }
+                else if(id == "clk_networkAnalysis"){
+                    document.getElementById('intro').style.display = 'none';
+                    document.getElementById('data').style.display = 'none';
+                    document.getElementById('sentimentAnalysis').style.display = 'none';
+                    document.getElementById('principalAnalysis').style.display = 'none';
+                    document.getElementById('regionalAnalysis').style.display = 'none';
+                    document.getElementById('networkAnalysis').style.display = 'inline';
+                    document.getElementById('results').style.display = 'none';
+                    document.getElementById('conclusion').style.display = 'none';
+                    document.getElementById('presentation').style.display = 'none';
+                }
+                else if(id == "clk_results"){
+                    document.getElementById('intro').style.display = 'none';
+                    document.getElementById('data').style.display = 'none';
+                    document.getElementById('sentimentAnalysis').style.display = 'none';
+                    document.getElementById('principalAnalysis').style.display = 'none';
+                    document.getElementById('regionalAnalysis').style.display = 'none';
+                    document.getElementById('networkAnalysis').style.display = 'none';
+                    document.getElementById('results').style.display = 'inline';
+                    document.getElementById('conclusion').style.display = 'none';
+                    document.getElementById('presentation').style.display = 'none';
+                }
+                else if(id == "clk_conclusion"){
+                    document.getElementById('intro').style.display = 'none';
+                    document.getElementById('data').style.display = 'none';
+                    document.getElementById('sentimentAnalysis').style.display = 'none';
+                    document.getElementById('principalAnalysis').style.display = 'none';
+                    document.getElementById('regionalAnalysis').style.display = 'none';
+                    document.getElementById('networkAnalysis').style.display = 'none';
+                    document.getElementById('results').style.display = 'none';
+                    document.getElementById('conclusion').style.display = 'inline';
+                    document.getElementById('presentation').style.display = 'none';
+                }
+                else if(id == "clk_presentation"){
+                    document.getElementById('intro').style.display = 'none';
+                    document.getElementById('data').style.display = 'none';
+                    document.getElementById('sentimentAnalysis').style.display = 'none';
+                    document.getElementById('principalAnalysis').style.display = 'none';
+                    document.getElementById('regionalAnalysis').style.display = 'none';
+                    document.getElementById('networkAnalysis').style.display = 'none';
+                    document.getElementById('results').style.display = 'none';
+                    document.getElementById('conclusion').style.display = 'none';
+                    document.getElementById('presentation').style.display = 'inline';
+                }
+            }
+            
+        </script>
+        
+    </head>
+    <body>
+        <div id="wrapper">
+            
+            <div class="fixed-top" style="width:100%">
+                <nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background-color: #010048;">
+                    <div class="col-md-2"><a class="navbar-brand" href="http://rdm.georgetown.domains/" style="color:white;">Analytics - Fall 2017</a></div>
+                    <div class="col-md-8 collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown active">
+                                <a class="nav-link dropdown-toggle" style="color:white;" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                                    501
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="/YelpWeather/Project.html">Project</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 pull-right"><a class="navbar-brand" href="/YelpWeather/Project.html" style="color:white;">Group 4</a></div>
+                </nav>
+                <nav class="navbar" style="background-color:white; position:fixed; width:100%">
+                    <ul class="nav nav-tabs justify-content-end">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#" id="clk_intro" onclick="showSection(id)">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#" id="clk_data" onclick="showSection(id)">Data</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#" id="clk_sentimentAnalysis" onclick="showSection(id)">Sentiment Analysis</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#" id="clk_principalAnalysis" onclick="showSection(id)">Principal Analysis</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#" id="clk_regionalAnalysis" onclick="showSection(id)">Regional Analysis</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#" id="clk_networkAnalysis" onclick="showSection(id)">Text Analysis</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#" id="clk_results" onclick="showSection(id)">Results</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#" id="clk_conclusion" onclick="showSection(id)">Conclusion</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#" id="clk_presentation" onclick="showSection(id)">Presentation</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div id="content" style="padding-top:70px">
+                
+                <div class="navbar navbar-fixed-left col-md-2" style="position: fixed;">
+                    <div class="list-group">
+                        <a href="/YelpWeather/Project1/Project1.html" class="list-group-item list-group-item-action">
+                            <i class="fa fa-file-o" aria-hidden="true"></i>&nbsp;Project 1
+                        </a>
+                        <a href="/YelpWeather/Project2/Project2.html" class="list-group-item list-group-item-action" >
+                            <i class="fa fa-file-o" aria-hidden="true"></i>&nbsp;Project 2
+                        </a>
+                        <a href="#" class="list-group-item" style="background-color: #010048; color:white;">
+                            <i class="fa fa-file-o" aria-hidden="true"></i>&nbsp;Project 3
+                        </a>
+                    </div>
+                    <br/><br/>
+                    <ul class="list-group">
+                        <li class="list-group-item" style="background-color: #010048; color:white;"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;The Team</li>
+                        <li class="list-group-item list-group-item-success"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;April Chung</li>
+                        <li class="list-group-item list-group-item-success"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;Kendra Gedney</li>
+                        <li class="list-group-item list-group-item-success"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;Yipin Lu</li>
+                        <li class="list-group-item list-group-item-success"><i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;Ratnadeep Mitra</li>
+                    </ul>
+                    <br/><br/>
+                    <form action="https://drive.google.com/a/georgetown.edu/file/d/1JP8ci5ieYWqWCvvN_de8zRWZJxhQ5dnP/view?usp=sharing">
+                        <input type="submit" value="Go to files" class="btn" style="background-color: #010048; color:white; width:100%; cursor:pointer"/>
+                    </form>
+                </div>
+                
+                <div id="writeup" class="container col-md-10" style="float: right">
+                    <div style="padding: 0px 40px 40px 40px;">
+                        <div style="font-size: 175%; padding-top: 5px">The Relationship between Weather and Yelp Reviews</div><br/>
+                        
+                        <div id="intro">
+                            <h3>1.  Introduction</h3><br/>
+                            <div style="text-align: justify;">
+                                Does the weather affect people's moods so much that they will rate restaurants lower or higher? Do people write more positive, five-star reviews on nice days because they are in a better mood? Does good weather lead to people have better experiences at restaurants, and lead to positive reviews? In general, we know that people are affected by the weather. And many researchers have conducted studies towards this issue. For example, in 2013, Horanont, et al. [1] use GPS location traces on mobile phones to passively track behavioral patterns in different weather. They found that people tend to stay at restaurants longer in colder weather. But does this effect also detectable in restaurant reviews? To investigate the answer, we conducted this research by using data from Yelp and NOAA.gov, a government website that contains daily weather data of every weather stations in the United States.
+                                <br/><br/>
+                                In this project, we compute sentiment analysis on the text of Yelp reviews. We look for correlations between the Yelp ratings and sentiment and the weather. We then attempt to predict the given Yelp rating based on the weather on the day of the review and the location of the restaurant. Beyond our principal data science question, we investigate regional differences in Yelp reviews and also determine relationships among the food-items mentioned in both high and low-star reviews. 
+                                <br/><br/>
+                                The project is divided into the following sections. In Section 2, we discuss the process of data collection, data cleaning and the description of our data. In Section 3, we present our various methods and results. Finally, in Section 4, the overall results are discussed. 
+                            </div><br/>
+                        </div>
+                        
+                        <div id="data" style="display:none">
+                            <h3>2.  Data</h3><br/>
+                            <div style="text-align: justify;">
+                                
+                                <h4><i>2.1   Data Collection</i></h4>
+                                <div style="text-align: justify;">
+                                    We collected data from two sources, Yelp and the National Oceanic and Atmospheric Administration (NOAA).  Both provide rich data that is free and accessible.
+                                    <br/><br/>
+                                    Using Yelp's API, we collected restaurant review and detail data from restaurants across US. We pulled three recent (between January 2017-October 2017) reviews from twenty restaurants across the top 300 most populous counties in the US. The Yelp data is sourced from two datasets. The Yelp Review data contains review excerpts (not full text) by restaurant with the rating, date, username of the reviewer, and URL link to the review. We merged that data with the Yelp Detail data which provides restaurant-level details, including latitude and longitude, address, city, phone number, category (pizza, tacos, etc.), price range, overall star rating, and number of reviews.
+                                    <br/><br/>
+                                    We collected the weather data from NOAA's Global Historical Climatology Network, which is a database containing daily weather measurements from weather stations across the world for 2017-to-date, including precipitation, temperature, and snowfall.
+                                    <br/><br/>
+                                    Click here for the full details of the <a href="/YelpWeather/Project1/Project1.html#clk_dataCollect">data collection process</a>. 
+                                </div><br/>
+                                
+                                <h4><i>2.2   Data Cleaning and Preprocessing</i></h4>
+                                <div style="text-align: justify;">
+                                    To clean and prepare the data for analysis, we performed the following tasks.
+                                    <br/>
+                                    (1)	We checked the Data for outliers, missing values and duplicates. Then we used the <i>restaurant_id</i> column as the key to merge the restaurant reviews and restaurant details. Thus, we get a data set that contains the latitude, longitude and time for each review.
+                                    <br/>
+                                    (2)	We used the package <i>geopy</i> to calculate the distances between restaurants and stations in a range of +/- 1 latitude and longitude, which is approximately 69 miles for latitude or longitude, for each restaurant. 
+                                    <br/>
+                                    (3)	We selected the closest station's data that have observed values on the same day as each review. We dropped 19 reviews because we could not find a close enough weather station with data for that day.
+                                    <br/>
+                                    (4)	We created new features, specifically of interest is the region bin.
+                                    <br/><br/>
+                                    Click here for the full details of the <a href="/YelpWeather/Project1/Project1.html#clk_dataCleaning">data cleaning</a> and <a href="/YelpWeather/Project2/Project2.html#clk_preprocessing">data merging process</a>. 
+                                </div><br/>
+                                    
+                                <h4><i>2.3   Data Overview</i></h4>  
+                                <div style="text-align: justify;">
+                                    After cleaning and preprocessing, we have a final dataset. Our final, cleaned dataset contains 14,788 reviews from 5,263 restaurants with weather measurements (temperature, precipitation and snow) for each day of the review from the nearest weather station. The below visualization, in Figure 2.3, shows the scope of our data. 
+                                    <br/><br/>
+                                    <div class='tableauPlaceholder' id='viz1512412122051' style='position: relative'>
+                                        <noscript>
+                                            <a href='#'>
+                                                <img alt='Locations of restaurants and weather stations ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Lo&#47;Locations_45&#47;Dashboard1&#47;1_rss.png' style='border: none' />
+                                            </a>
+                                        </noscript>
+                                        <object class='tableauViz'  style='display:none;'>
+                                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                                            <param name='embed_code_version' value='3' /> 
+                                            <param name='site_root' value='' />
+                                            <param name='name' value='Locations_45&#47;Dashboard1' />
+                                            <param name='tabs' value='no' />
+                                            <param name='toolbar' value='yes' />
+                                            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Lo&#47;Locations_45&#47;Dashboard1&#47;1.png' /> 
+                                            <param name='animate_transition' value='yes' />
+                                            <param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+                                            <param name='display_overlay' value='yes' /><param name='display_count' value='yes' />
+                                            <param name='filter' value='publish=yes' />
+                                        </object>
+                                    </div>                
+                                    <script type='text/javascript'>                    
+                                        var divElement = document.getElementById('viz1512412122051');                    
+                                        var vizElement = divElement.getElementsByTagName('object')[0];                    
+                                        vizElement.style.width='1000px';vizElement.style.height='827px';                    
+                                        var scriptElement = document.createElement('script');                    
+                                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                                        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                                    </script>
+                                </div>
+                            </div><br/>  
+                        </div>
+                                
+                        
+                        <div id="sentimentAnalysis" style="display:none">
+                            <h3>3.1  Sentiment Analysis</h3><br/>
+                            <div style="text-align: justify;">
+                                <div style="text-align: justify;">
+                                    We performed sentiment analysis on the text of the review excerpts using the Python package <i>NLTK</i> and the library <i>TextBlob</i>. Results were mixed. There is not a strong correlation between the computed sentiment and the given star rating, with a correlation coefficient of 0.32. In Figure 3.1.1, the rating is plotted against the sentiment. The correlation, although weak, is visible. As the Yelp rating moves to 5-stars, the polarity of the sentiment also increases. 
+                                    <br/><br/>
+                                    <center>
+                                        <figcaption>Figure 3.1.1: Scatterplot of <i>sentiment_polarity</i> and <i>review_rating</i></figcaption>
+                                        <img src="/YelpWeather/Project2/Fig8.1.png"/>
+                                    </center>
+                                    <br/><br/>
+                                    In Figure 3.1.2 below, the sentiment analysis is compared with the given Yelp rating. The sentiment analysis classifies 88% of 5-star reviews as Positive. On the other hand, the sentiment analysis only classifies 46% of 1-star reviews as Negative. The alignment is not perfect, again suggesting some performance issues in the sentiment analysis.
+                                    <br/><br/>
+                                    <center>
+                                        <figcaption>Figure 3.1.2: Sentiment Classification by Review Rating</figcaption>
+                                        <div class='tableauPlaceholder' id='viz1512417679618' style='position: relative;'>
+                                            <noscript>
+                                                <a href='#'>
+                                                    <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Se&#47;SentimentCount&#47;Dashboard1&#47;1_rss.png' style='border: none;' />
+                                                </a>
+                                            </noscript>
+                                            <object class='tableauViz'  style='display:none;'>
+                                                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                                                <param name='embed_code_version' value='3' />
+                                                <param name='site_root' value='' />
+                                                <param name='name' value='SentimentCount&#47;Dashboard1' />
+                                                <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+                                                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Se&#47;SentimentCount&#47;Dashboard1&#47;1.png' /> 
+                                                <param name='animate_transition' value='yes' />
+                                                <param name='display_static_image' value='yes' />
+                                                <param name='display_spinner' value='yes' />
+                                                <param name='display_overlay' value='yes' />
+                                                <param name='display_count' value='yes' />
+                                                <param name='filter' value='publish=yes' />
+                                            </object>
+                                        </div>                
+                                        <script type='text/javascript'>                    
+                                            var divElement = document.getElementById('viz1512417679618');                    
+                                            var vizElement = divElement.getElementsByTagName('object')[0];                    
+                                            vizElement.style.width='1000px';vizElement.style.height='827px';                    
+                                            var scriptElement = document.createElement('script');                    
+                                            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                                            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                                        </script>
+                                    </center>
+                                    <br/><br/>
+                                    Isolating some of the reviews as examples, we can see some of the successes and failures of the sentiment analysis. 
+                                    <br/><br/>
+                                    <center>
+                                        <b>Example. 1: 1-star, classified as negative</b><br/>
+                                        <i>"What a terrible experience! Empty restaurant, bad service, wonky temperature settings, food poisoning. Pretty much sums up my night! We paid $180.00...."</i>
+                                        <br/><br/>
+                                        <b>Example. 2: 5-star, classified as positive</b><br/>
+                                        <i>"Stopped in for a weekday lunch.  What a treat!   Oktoberfest menu was great!   Brat was delicious!  Awesome counter service too...friendly and informative...."</i>
+                                        <br/><br/>
+                                        <b>Example. 3: 1-star, classified as positive</b><br/>
+                                        <i>"Sitting here, I am absolutely astounded that previous reviews are, mostly, so overwhelmingly positive."</i><br/>
+                                        <i>"The one and only good thing about this place is they have a decent rose."</i><br/>
+                                        <br/><br/>
+                                        <b>Example. 4: 5-stars, classified as negative</b><br/>
+                                        <i>"I do not give 5 stars often but this chicken joint is OUTSTANDING! I'm so glad we stopped in from out of town."</i><br/>
+                                        <i>"A hidden gem!"</i>
+                                    </center>
+                                    <br/><br/>
+                                    In example 3, the reviewers use positive words to describe a bad experience, which causes the sentiment analysis to fail.  The same problem occurs in example 4. The second review in example 4 is so short which is difficult for sentiment analysis to classify. 
+                                    <br/><br/>
+                                    Finally, we generated a word cloud, in Figure 3.1.3, based on the frequency of words in the reviews using the <i>wordcloud</i> package in <i>NLTK</i>. The largest words (and thus most common) tend to be positive, for example, "good", "great", and "love". This is expected as the majority of reviews in our dataset were classified as positive (83%), and given 5-star reviews (55%). 
+                                    <br/><br/>
+                                    <center>
+                                        <figcaption>Figure 3.1.3 Yelp Reviews Word Cloud</figcaption>
+                                        <img src="/YelpWeather/Project2/all_WordCloud.png"/>
+                                    </center>
+                                </div>
+                            </div><br/>
+                        </div>
+                        
+                        <div id="principalAnalysis" style="display:none">
+                            <h3>3.2   Analysis - Relationship between Weather and Reviews</h3><br/>
+                            <div style="text-align: justify;">
+                                <h5>3.2.1   Text Mining</h5>
+                                <div style="text-align: justify;">
+                                    First, we mined the reviews for weather-related terms (i.e. <i>rainy</i>, <i>humid</i>). 0.7% of reviews include weather-related terms. A few reviews that mention the weather in a positive way are shown in the examples below.
+                                    <br/><br/>
+                                    <center>
+                                        <b>Example 5: Positive weather mentions in Yelp reviews</b><br/>
+                                        <i>"What an afternoon of perfection. Great location, great food and awesome weather! I know the Back Porch isn't responsible for the cool breeze, but the ample.."</i><br/>
+                                        <i>"What do you do when it's a rainy Saturday afternoon on the beach? You park it at a local beach bar of course! Live music, relaxed feel and only a few people..."</i><br/>
+                                        <i>"Came here on a rainy Friday afternoon with my husband. What a lovely spot! First of all the decor and architecture of the space was intriguing and vibrant..."</i>
+                                    </center>
+                                    <br/>
+                                    In Example 6, the good weather is mentioned, but in a negative way since it leads to crowds at that particular restaurant. 
+                                    <br/><br/>
+                                    <center>
+                                        <b>Example 6: Negative weather mentions in Yelp Reviews</b><br/>
+                                        <i>"Ugh! I have tried to eat at this place three times, forget about it. I was excited to go today the weather is beautiful and they have outdoor seating, but I.."</i>
+                                    </center>
+                                    <br/>
+                                    Although only a few reviewers explicitly mention the weather in their Yelp review, the effect could still be implicit.
+                                </div><br/><br/>
+                                    
+                                <h5>3.2.2   Correlation of Temperature with Yelp review ratings and sentiment</h5>
+                                <div style="text-align: justify;">
+                                    We do not find strong correlations between temperature and the review ratings or the sentiment. Both correlation coefficients are near zero. Even when isolating by region, as shown below in Table 3.2.2, there is no correlation, suggesting the temperature does not have much of an effect on Yelp ratings. 
+                                    <br/><br/>
+                                    <center>
+                                        <figcaption>Table 3.2.2: Correlation Coefficients</figcaption>
+                                        <table class="table table-sm table-bordered">
+                                            <thead class="thead-default">
+                                                <tr><th>Region</th><th>TAVG & review_rating</th><th>TAVG & sentiment_polarity</th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>Mountain</td><td>0.06</td><td>-0.06</td></tr>
+                                                <tr>
+                                                        <td>SouthCentral</td>
+                                                        <td>0.04</td>
+                                                        <td>-0.01</td>
+                                                    </tr>
+                                                <tr>
+                                                        <td>MidAtlantic</td>
+                                                        <td>0.03</td>
+                                                        <td>0.02</td>
+                                                    </tr>
+                                                <tr>
+                                                        <td>Southeast</td>
+                                                        <td>0.02</td>
+                                                        <td>0.02</td>
+                                                    </tr>
+                                                <tr>
+                                                        <td>NorthCentral</td>
+                                                        <td>0.01</td>
+                                                        <td>0.02</td>
+                                                    </tr>
+                                                <tr>
+                                                        <td>Midwest</td>
+                                                        <td>0.00</td>
+                                                        <td>0.03</td>
+                                                    </tr>
+                                                <tr>
+                                                        <td>NewEngland</td>
+                                                        <td>0.00</td>
+                                                        <td>-0.03</td>
+                                                    </tr>
+                                                <tr>
+                                                        <td>Pacific</td>
+                                                        <td>0.00</td>
+                                                        <td>-0.01</td>
+                                                    </tr>
+                                                <tr>
+                                                        <td>Northwest</td>
+                                                        <td>-0.06</td>
+                                                        <td>0.06</td>
+                                                    </tr>
+                                                <tr>
+                                                        <th>All Regions</th>
+                                                        <th>0.02</th>
+                                                        <th>0.01</th>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                    </center>
+                                    <br/><br/>
+                                    For further visualization of the <a href="/YelpWeather/Project2/Project2.html">correlations</a>
+                                </div><br/><br/>
+                                    
+                                <h5>3.2.3   Clustering Analysis</h5>
+                                <div style="text-align: justify;">
+                                    Next, we used clustering analysis to explore the relationship among temperature, sentiment and the location of the restaurant (using <i>rest_lat</i>, <i>rest_long</i>, <i>TAVG</i> and <i>sentiment_polarity</i>). We used both KMeans (with k=3) and DBScan. Results are visualized below in Figures 3.2.3 ad 3.2.4 using PCA. Although DBScan better identifies the outliers, no clear clusters formed. Again, this suggests that there is no strong relationship among temperature and Yelp reviews. 
+                                    <br/><br/>
+                                    <center>
+                                        <figcaption>Figure 3.2.3: KMeans Clustering</figcaption>
+                                        <div>
+                                            <a href="https://plot.ly/~rmitra90/32/?share_key=INr8LX4FilRgiGfhEhpxSN" target="_blank" title="kmeans" style="display: block; text-align: center;">
+                                                <img src="https://plot.ly/~rmitra90/32.png?share_key=INr8LX4FilRgiGfhEhpxSN" alt="kmeans" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" />
+                                            </a>
+                                            <script data-plotly="rmitra90:32" sharekey-plotly="INr8LX4FilRgiGfhEhpxSN" src="https://plot.ly/embed.js" async></script>
+                                        </div>
+                                    </center>
+                                    <br/><br/>
+                                    <center>
+                                        <figcaption>Figure 3.2.4: DBSCAN</figcaption>
+                                        <div>
+                                            <a href="https://plot.ly/~rmitra90/34/?share_key=bmDBj6rwYP1NpJSh5DeyZi" target="_blank" title="dbscan" style="display: block; text-align: center;">
+                                                <img src="https://plot.ly/~rmitra90/34.png?share_key=bmDBj6rwYP1NpJSh5DeyZi" alt="dbscan" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" />
+                                            </a>
+                                            <script data-plotly="rmitra90:34" sharekey-plotly="bmDBj6rwYP1NpJSh5DeyZi" src="https://plot.ly/embed.js" async></script>
+                                        </div>
+                                    </center>
+                                </div><br/><br/>
+                                    
+                                <h5>3.2.4   Multivariate Linear Regression</h5>
+                                <div style="text-align: justify;">
+                                    We conducted multivariate linear regression analysis to explore whether rainy climate or level of temperature would influence customer's sentiment. We split the data into train and test datasets. Then we build a multivariate linear regression model based on the train dataset.  The X attributes are <i>PRCP</i> and <i>TAVG</i>. The Y attribute is <i>sentiment_polarity</i>. Next, we use the test dataset to examine the performance of the model. The performance of this model is poor. The R<sup>2</sup> is -0.001, which shows there is no relationship between X (weather attributes) and Y (<i>sentiment_polarity</i>). The 3D plot below in Figure 3.2.4 also illustrates the same point. the blue points represent the real data in our dataset. The red plane represents the prediction of regression model. We could conclude that there is no significant relationship between the X and Y attributes.  In addition, we also selected five states, which were CA, VA, NE, NY and AL, to build state-level multivariate linear regression models. However, the results were the same.
+                                    <br/><br/>
+                                    <center>
+                                        <figcaption>Figure 3.2.4:  Multivariate Linear Regression</figcaption>
+                                        <img src="/YelpWeather/Project3/mlr.png"/>
+                                    </center>
+                                </div><br/><br/>
+                                    
+                                <h5>3.2.5   Machine Learning: Classifying Reviews based on Weather and Location</h5>
+                                <div style="text-align: justify;">
+                                    Lastly, we tested whether Yelp ratings could be predicted based on location and weather alone. We used five different machine learning techniques: k-Nearest Neighbor (kNN), Decision Tree (CART), Naive Bayes (NB), Support Vector Machines (SVM), and Random Forest. 
+                                    <br/><br/>
+                                    First, we grouped the rating into two classes: High (4-5 stars) and Low (0-3 stars). Next, we applied each machine learning algorithm. The results for cross-validation are below in Table 3.2.5. Naive Bayes and SVC performed the best in cross-validation, with ~80% accuracy.
+                                    <br/><br/>
+                                    <center>
+                                        <figcaption>Table 3.2.5: Cross-Validation Results</figcaption>
+                                        <table class="table table-sm table-bordered">
+                                            <thead class="thead-default">
+                                                <tr>
+                                                    <th>Method</th>
+                                                    <th>Mean</th>
+                                                    <th>Std. Dev.</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>NB</td>
+                                                    <td>0.80</td>
+                                                    <td>-0.01</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>SVC</td>
+                                                    <td>0.80</td>
+                                                    <td>-0.01</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>KNN</td>
+                                                    <td>0.77</td>
+                                                    <td>-0.01</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>RF</td>
+                                                    <td>0.76</td>
+                                                    <td>-0.01</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CART</td>
+                                                    <td>0.75</td>
+                                                    <td>-0.01</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </center>
+                                    <br/><br/>
+                                    Click here for <a href="/YelpWeather/Project2/Project2.html">the confusion matrix results</a> for each method.
+                                    <br/><br/>
+                                    The ROC curve for each method is below in Figure 3.2.5. The dotted line indicates the results if the classification was left to random chance. Our machine learning algorithms just barely outperform the dotted line. This indicates that we cannot predict the rating by weather and location alone better than random chance. 
+                                    <br/><br/>
+                                    <center>
+                                        <figcaption>Figure 3.2.5: ROC Curve</figcaption>
+                                        <div>
+                                            <a href="https://plot.ly/~chineselv/14/" target="_blank" title="ROC Curve" style="display: block; text-align: center;">
+                                                <img src="https://plot.ly/~chineselv/14.png" alt="ROC Curve" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" />
+                                            </a>
+                                            <script data-plotly="chineselv:14" src="https://plot.ly/embed.js" async></script>
+                                        </div>
+                                    </center>
+                                </div><br/>
+                            </div><br/>
+                        </div>
+                        
+                        <div id="regionalAnalysis" style="display:none">
+                            <h3>3.3   Analysis - Regional Analysis of Yelp Reviews</h3><br/>
+                            <div style="text-align: justify;">
+                                In addition to investigating the relationship of reviews and weather, we performed regional analysis on the Yelp reviews. 
+                                <br/><br/>
+                                <div style="text-align: justify;">
+                                    
+                                    <h5>3.3.1   Regional Difference in Ratings</h5>
+                                    <div style="text-align: justify;">
+                                        First, looking at the average rating by region, there is a seemingly small difference between them. Reviews from the Southeast are the highest on average, while those from New England are the lowest as shown in Table 3.3.1A below.
+                                        <br/><br/>
+                                        <center>
+                                            <figcaption>Table 3.3.1A: Average Rating by Region</figcaption>
+                                            <table class="table table-sm table-bordered" style="width:30%">
+                                                    <thead class="thead-default">
+                                                        <tr>
+                                                            <th>Region</th>
+                                                            <th>Mean Review Rating</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Southeast</td>
+                                                            <td>4.27</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>SouthCentral</td>
+                                                            <td>4.22</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mountain</td>
+                                                            <td>4.20</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>MidAtlantic</td>
+                                                            <td>4.19</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Northwest</td>
+                                                            <td>4.19</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>NorthCentral</td>
+                                                            <td>4.19</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Midwest</td>
+                                                            <td>4.16</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Pacific</td>
+                                                            <td>4.12</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>NewEngland</td>
+                                                            <td>4.10</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                        </center>
+                                        <br/><br/>
+                                        However, after running an ANOVA 1-way test, we find a significant difference in the mean Yelp rating by region. The resulting p-value is extremely small, at 5.95e-5. Therefore, we reject the null hypothesis and determine that reviewers in different regions of the US give Yelp star ratings differently (harsher in New England, more lenient in Southeast). 
+                                        <br/><br/>
+                                        Running the same test on the sentiment of the reviews, the difference is not as significant, with a p-value of 0.055. Again, New England and Pacific are the least positive in their reviews, as shown in Table 3.3.1B. 
+                                        <br/><br/>
+                                        <center>
+                                                <figcaption>Table 3.3.1B: Average Review Sentiment by Region</figcaption>
+                                                <table class="table table-sm table-bordered" style="width:30%">
+                                                    <thead class="thead-default">
+                                                        <tr>
+                                                            <th>Region</th>
+                                                            <th>Mean Sentiment Polarity</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>NorthCentral</td>
+                                                            <td>0.30</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Midwest</td>
+                                                            <td>0.30</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Northwest</td>
+                                                            <td>0.29</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>SouthCentral</td>
+                                                            <td>0.29</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Southeast</td>
+                                                            <td>0.28</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>MidAtlantic</td>
+                                                            <td>0.28</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mountain</td>
+                                                            <td>0.28</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Pacific</td>
+                                                            <td>0.27</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>NewEngland</td>
+                                                            <td>0.27</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </center>
+                                    </div><br/>   
+                                        
+                                    <h5>3.3.2   Clustering Reviews by Region</h5>
+                                    <div style="text-align: justify;">
+                                            Regions of the US may also use different vocabulary when writing Yelp reviews. To further investigate regional differences, we used hierarchical clustering on the review text. Using distance cosine similarity, the clustering analysis resulted in three clusters from the nine regions with a Silhouette score of 0.33. 
+                                            <br/><br/>
+                                            The dendrogram, in Figure 3.3.2, shows that the most similar reviews are from the Mid-Atlantic and the Southeast, which makes sense since the states from those regions are adjacent. The Midwest, Mountain and New England regions stand apart as being the most different.
+                                            <br/><br/>
+                                            <center>
+                                                <figcaption>Figure 3.3.2: Dendrogram</figcaption>
+                                                <div>
+                                                    <a href="https://plot.ly/~chineselv/12/" target="_blank" title="dendrogram_with_labels" style="display: block; text-align: center;">
+                                                        <img src="https://plot.ly/~chineselv/12.png" alt="dendrogram_with_labels" style="max-width: 100%;width: 800px;"  width="800" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" />
+                                                    </a>
+                                                    <script data-plotly="chineselv:12" src="https://plot.ly/embed.js" async></script>
+                                                </div>
+                                            </center>
+                                        </div><br/>
+                                    
+                                </div>
+                            </div><br/>
+                        </div>
+                        
+                        <div id="networkAnalysis" style="display:none">
+                            <h3>3.4   Analysis - Analysis of Food Mentioned in High and Low-Star Reviews</h3><br/>
+                            <div style="text-align: justify;">
+                                <h5>3.4.1   Network Analysis with Food-item words</h5>
+                                <div style="text-align: justify;">
+                                    Looking further into the Yelp review data, we investigated whether specific food items affect ratings. First, we used association rules on the food-related words that appear in reviews. We extracted review data with 5-star ratings then found the subset of common food words. From the association rule analysis, we were able to see what food items they liked, especially the combination of food. Click here for details on <a href="/YelpWeather/Project2/Project2.html#clk_associationRules">association rules</a>.
+                                    <br/><br/>
+                                    In order to see what food items came up for high and low rated reviews, we found frequency tables with the top 15 popular food items. Table 3.4.1 shows the frequency of food items in reviews with a 5-star rating and low-rated reviews with 1-star to 3-star ratings. 
+                                    <br/><br/>
+                                    <center>
+                                        <figcaption>Table 3.4.1: Mentions in High-Rated (5-star) and Low-Rated (1-3-star) Reviews</figcaption>
+                                    
+                                        <div style="width:100%" class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-5">
+                                                <table class="table table-sm table-bordered">
+                                                        <thead class="thead-default">
+                                                            <tr>
+                                                                <th>Food Item</th>
+                                                                <th>Frequency</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr><td>chicken</td><td>410</td></tr>
+                                                            <tr><td>cheese</td><td>195</td></tr>
+                                                            <tr><td>pork</td><td>166</td></tr>
+                                                            <tr><td>fries</td><td>157</td></tr>
+                                                            <tr><td>shrimp</td><td>139</td></tr>
+                                                            <tr><td>steak</td><td>133</td></tr>
+                                                            <tr><td>fish</td><td>127</td></tr>
+                                                            <tr><td>seafood</td><td>126</td></tr>
+                                                            <tr><td>side</td><td>106</td></tr>
+                                                            <tr><td>meat</td><td>101</td></tr>
+                                                            <tr><td>bread</td><td>92</td></tr>
+                                                            <tr><td>beef</td><td>91</td></tr>
+                                                            <tr><td>crab</td><td>80</td></tr>
+                                                            <tr><td>date</td><td>76</td></tr>
+                                                            <tr><td>brisket</td><td>72</td></tr>
+                                                        </tbody>
+                                                    </table>
+                                            </div>
+                                            
+                                            <div class="col-md-5">
+                                                <table class="table table-sm table-bordered">
+                                                    <thead class="thead-default">
+                                                        <tr>
+                                                            <th>Food Item</th>
+                                                            <th>Frequency</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr><td>chicken</td><td>156</td></tr>
+                                                        <tr><td>cheese</td><td>64</td></tr>
+                                                        <tr><td>fries</td><td>56</td></tr>
+                                                        <tr><td>meat</td><td>49</td></tr>
+                                                        <tr><td>shrimp</td><td>46</td></tr>
+                                                        <tr><td>side</td><td>45</td></tr>
+                                                        <tr><td>steak</td><td>44</td></tr>
+                                                        <tr><td>pork</td><td>41</td></tr>
+                                                        <tr><td>bread</td><td>40</td></tr>
+                                                        <tr><td>fish</td><td>38</td></tr>
+                                                        <tr><td>crab</td><td>33</td></tr>
+                                                        <tr><td>plate</td><td>33</td></tr>
+                                                        <tr><td>seafood</td><td>32</td></tr>
+                                                        <tr><td>beef</td><td>27</td></tr>
+                                                        <tr><td>lobster</td><td>23</td></tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                        </div>
+                                    </center>
+                                    <br/><br/>
+                                    Generally, the same words are repeated in both high and low rated reviews - specifically 13 out of 15 words appear in both lists.
+                                    <br/><br/>
+                                    Furthermore, we wanted to look at the co-occurrence of food items in both high and low rated reviews. For example, would eating certain combination of food like chicken and fries lead to higher ratings because it's generally a popular dish? Therefore, we conducted a network analysis to detect any patterns. Table 3.4.2 shows the top portion of the frequency table of co-occurrence food-related words for high-rated reviews and low-rated reviews. Again, there is a large overlap with 13 combinations of food that appear in both high and low rated reviews, based on the full data.
+                                    <br/><br/>
+                                    <center>
+                                        <figcaption>Table 3.4.2: Word Co-occurrence in High-Rated (5-star) and Low-Rated (1-3-star) Reviews (Truncated)</figcaption>
+                                        <div style="width:100%" class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-5">
+                                            <table class="table table-sm table-bordered">
+                                                <thead class="thead-default">
+                                                        <tr>
+                                                            <th>Food 1</th>
+                                                            <th>Food 2</th>
+                                                            <th>Co-occurrence Count</th>
+                                                        </tr>
+                                                    </thead>
+                                                <tbody>
+                                                        <tr><td>chicken</td><td>steak</td><td>26</td></tr>
+                                                        <tr><td>chicken</td><td>pork</td><td>22</td></tr>
+                                                        <tr><td>pork</td><td>brisket</td><td>16</td></tr>
+                                                        <tr><td>chicken</td><td>cheese</td><td>16</td></tr>
+                                                        <tr><td>cheese</td><td>fries</td><td>15</td></tr>
+                                                        <tr><td>cheese</td><td>steak</td><td>15</td></tr>
+                                                        <tr><td>fish</td><td>seafood</td><td>15</td></tr>
+                                                        <tr><td>chicken</td><td>fries</td><td>11</td></tr>
+                                                        <tr><td>chicken</td><td>beef</td><td>10</td></tr>
+                                                        <tr><td>shrimp</td><td>crab</td><td>10</td></tr>
+                                                        <tr><td>chicken</td><td>shrimp</td><td>10</td></tr>
+                                                    </tbody>
+                                            </table>
+                                        </div>
+                                            
+                                            <div class="col-md-5">
+                                            <table class="table table-sm table-bordered">
+                                                <thead class="thead-default">
+                                                    <tr>
+                                                        <th>Food 1</th>
+                                                        <th>Food 2</th>
+                                                        <th>Co-occurrence Count</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>chicken</td><td>fries</td><td>11</td></tr>
+                                                    <tr><td>chicken</td><td>cheese</td><td>7</td></tr>
+                                                    <tr><td>fries</td><td>fish</td><td>6</td></tr>
+                                                    <tr><td>chicken</td><td>plate</td><td>5</td></tr>
+                                                    <tr><td>meat</td><td>plate</td><td>5</td></tr>
+                                                    <tr><td>cheese</td><td>meat</td><td>5</td></tr>
+                                                    <tr><td>chicken</td><td>pork</td><td>5</td></tr>
+                                                    <tr><td>chicken</td><td>side</td><td>5</td></tr>
+                                                    <tr><td>chicken</td><td>shrimp</td><td>5</td></tr>
+                                                    <tr><td>chicken</td><td>fish</td><td>4</td></tr>
+                                                    <tr><td>cheese</td><td>fries</td><td>4</td></tr>
+                                                    <tr><td>cheese</td><td>bread</td><td>4</td></tr>
+                                                    <tr><td>pork</td><td>plate</td><td>4</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                            <div class="col-md-1"></div>
+                                        </div>
+                                    </center>
+                                    <br/><br/>
+                                    We then analyze the network graph to extract more information about the relationship of the co-occurrence food-items. We set words as the nodes and the co-occurrence count as the edges. The graphs of both of these food combinations for high and low-rated reviews gives a good visualization, but it does not show any patterns nor could we derive new information. 
+                                    <br/><br/>
+                                    The main differences between the network graphs of high and low-rated reviews were higher density values and average clustering centrality for high ratings reviews. The low rated reviews showed relatively higher betweenness for item "chicken" compared to those for other items like "cheese" and "fries"; whereas the high rated reviews didn't show much betweenness between the nodes as each were very close to 0. Both high and low rated reviews indicated very small community modularity which indicates that there are not strong clustering in the network as shown in the figures below. 
+                                    <br/><br/>
+                                    <center>
+                                        <figcaption>Figure 3.4.1: Network Analysis</figcaption>
+                                        <div>
+                                            <a href="https://plot.ly/~ahc72/18/" target="_blank" title="highrating_foodNetwork" style="display: block; text-align: center;">
+                                                <img src="https://plot.ly/~ahc72/18.png" alt="highrating_foodNetwork" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" />
+                                            </a>
+                                            <script data-plotly="ahc72:18" src="https://plot.ly/embed.js" async></script>
+                                        </div>
+                                        <br/><br/>
+                                        <div>
+                                            <a href="https://plot.ly/~ahc72/16/" target="_blank" title="lowrating_foodNetwork" style="display: block; text-align: center;">
+                                                <img src="https://plot.ly/~ahc72/16.png" alt="lowrating_foodNetwork" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" />
+                                            </a>
+                                            <script data-plotly="ahc72:16" src="https://plot.ly/embed.js" async></script>
+                                        </div>
+                                    </center>
+                                    <br/><br/>
+                                    More of the network analysis results are found in <i>lowRatingResults.txt</i> and <i>highRatingResults.txt</i> in the appendix. Overall the network analysis result does not add more information in network relationship. Therefore, we conclude that food items don’t show differences in ratings in Yelp reviews.  
+                                </div><br/>
+                            
+                                <h5>3.5.1   Analysis - Topic Modeling</h5>
+                                <div style="text-align: justify;">
+                                Furthering our analysis of the text of the reviews, we performed topic modelling to look for patterns beyond just food-items mentioned in reviews. We used Latent Dirichlet Allocation (LDA) in the <i>scikit-learn</i> package. We used all reviews (high and low-star) to determine the top 10 topics and their top 20 associated words. Results are below in Table 3.5
+                                <br/><br/>
+                                <center>
+                                        <table class="table-striped" style="width:60%">
+                                            <tbody>
+                                                <tr><td><b>Topic: 0</b></td></tr>
+                                                <tr><td>pizza great stopped lunch way breakfast stop place spot recommend food highly home just ordered drive quick little excellent worth</td></tr>
+                                                <tr><td><b>Topic: 1</b></td></tr>
+                                                <tr><td>night came dinner went wait lunch time brunch sunday saturday place got friday busy seated minutes group took service arrived</td></tr>
+                                                <tr><td><b>Topic: 2</b></td></tr>
+                                                <tr><td>place area love bar stars time best restaurant visiting dining favorite friend day meal experience places right list restaurants dinner</td></tr>
+                                                <tr><td><b>Topic: 3</b></td></tr>
+                                                <tr><td>good food place menu really bbq like huge pork options portions variety free small got ordered delicious bowl tasty little</td></tr>
+                                                <tr><td><b>Topic: 4</b></td></tr>
+                                                <tr><td>place try yelp reviews decided wanted did gem went restaurant new finally lunch time glad area dinner came looking great</td></tr>
+                                                <tr><td><b>Topic: 5</b></td></tr>
+                                                <tr><td>chicken delicious food ordered fried cheese salad fresh good great best fries amazing steak fish shrimp burger sandwich got sauce</td></tr>
+                                                <tr><td><b>Topic: 6</b></td></tr>
+                                                <tr><td>best ve food place restaurant mexican favorite tacos years new amazing authentic tried delicious places restaurants love area bbq life</td></tr>
+                                                <tr><td><b>Topic: 7</b></td></tr>
+                                                <tr><td>place restaurant small food great like inside nice little love seating location atmosphere parking outside bar cute really don feel</td></tr>
+                                                <tr><td><b>Topic: 8</b></td></tr>
+                                                <tr><td>great food service good place friendly staff nice atmosphere excellent amazing love beer delicious really selection bar drinks awesome attentive</td></tr>
+                                                <tr><td><b>Topic: 9</b></td></tr>
+                                                <tr><td>food good ve times time review place restaurant like really just bad experience pretty best know different service don say</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </center>
+                                    <br/><br/>
+                                    At first glance, we do not see much of a difference among the topics. This is expected since we assume most reviewers are writing about their experience at a restaurant - which is an already narrow topic.
+                                    <br/><br/>
+                                    However, upon further investigation, we do determine slight differences among the topics. Topic 5 is mostly composed of specific food items: chicken, cheese, salad, burger.  Topic 7 has many atmosphere-related words without any food words: atmosphere, cute, seating, inside, bar. Topic 8 has the most service-related words: service, friendly, staff, attentive. Finally, Topic 1 also is experience-related, but focuses more on time and day of week: wait, busy, seated, minutes, group, Friday, Saturday, Sunday.
+                                    <br/><br/>
+                                    Therefore, through the topic modelling, we uncover some slight patterns in the Yelp reviews. Some reviewers focus on just the food itself while others focus on the overall experience.
+                                </div><br/>
+                            </div><br/>
+                        </div>
+                        
+                        <div id="results" style="display:none">
+                            <h3>7.  Results</h3><br/>
+                            <div style="text-align: justify;">
+                                From the analysis with this dataset, we are unable to show a detectable relationship between weather and Yelp reviews.  A confounding factor is the difficulty of determining the direction of a weather effect. For some people, as seen in Example 5,  the rain has a positive effect on the experience. So the same weather could mean both a good experience (hot soup on a cold rainy day) and a bad experience (waiting outside in the rain). The same goes for temperature. A nice, warm day could mean both a positive experience or could mean a crowded restaurant and slow service. Therefore there still may be a weather effect, but it is complicated and difficult to capture in a broad study.
+                                <br/><br/>
+                                We did determine regional differences in Yelp reviews. Although Yelp ratings are high across regions, they are significantly different. Reviewers on the coasts, Pacific and New England, are the hardest to please, with a lower average Yelp rating. Similarly, their reviews are the least positive, with the lowest sentiment scores. The clustering analysis on the review text supports this regional division in the language used in Yelp reviews. Language differences could result from different vocabulary, either in how experiences are described (<i>wicked</i> in New England), regional food items (<i>lobster</i> in New England, <i>catfish</i> in the Southeast and South Central, <i>avocado</i> in the Pacific), or names of places or states. 
+                                <br/><br/>
+                                Although we see some differences in languages by region, the top popular food items overall were shared across the nation with "chicken", "cheese", and "fries". Observing the results from our association and network analysis, we determine that the differences are not obvious enough to conclude that it affects review ratings. 
+                                <br/><br/>
+                                There are some limitations to our study. Although providing rich data through its API, Yelp does withhold some data. They only provide review excerpts, not full text reviews. This negatively affected our sentiment analysis and network analysis. Weather is seasonal, and as part of this analysis we did not account for seasonal differences. Finally, we do not know the weather the day they visited the restaurant, our analysis is based on the day they wrote the Yelp review.
+                            </div><br/>
+                        </div>
+                        
+                        <div id = "conclusion" style="display:none">
+                            <h3>8.  Conclusion</h3><br/>  
+                            <div style="text-align: justify;">
+                                To conclude, we are unable to prove in this study that Yelp reviews change with the weather.  Although people may be affected by the weather, it is not detectable in the Yelp reviews that they write. Through studying Yelp reviews across the country and across seasons for which there are large variations in weather, our study may have been too broad to capture such a relationship. For both restaurants and restaurant-goers, Yelp reviews are important for making decisions. Had our study determined a weather effect, it could have been used to provide better, more accurate information to its consumers. 
+                            </div><br/>
+                        </div>
+                        
+                        <div id = "presentation" style="display:none">
+                            <h3>9.  Presentation</h3><br/>  
+                            <div style="text-align: justify;">
+                                <embed src= "Relationship between Yelp Reviews and Weather.pdf" width="100%" height="550">
+                            </div><br/>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
