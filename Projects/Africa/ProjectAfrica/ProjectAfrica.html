@@ -55,9 +55,7 @@
             <a href="https://foreignpolicy.com/2017/02/24/infographic-heres-how-the-global-gdp-is-divvied-up/" target="_blank">For reference</a>,
             that figure is about the same as Canada’s contribution alone.
             <br /><br />
-            In our earlier project, we covered....
-            <br />
-            The static visualizations are available for exploration here:
+            The static visualizations from an earlier version of the website are available for exploration here:
             <br />
             <ul>
                 <li>
@@ -71,28 +69,19 @@
                 </li>
             </ul>
             <br /><br />
-            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.16/iframeResizer.min.js"></script>
-            <style>
-                iframe {
-                    min-width: 100%;
-                }
-            </style>
             <figure style="border: 1px solid #000; height:auto">
-                <iframe id="myIframe" src="https://rdmitra.shinyapps.io/tss_wld_gdp/" scrolling="no" frameborder="no"></iframe>
+                <embed id="myIframe" src="https://rdmitra.shinyapps.io/tss_wld_gdp/" 
+                       style="width:100%; height:650px" />
                 <figcaption style="font-size:small">
                     <i>
-                        Figure 1: GDP Trends for Sub Saharan Africa and the World. 
+                        Figure 1: GDP Trends for Sub Saharan Africa and the World.
                         Also available <a href="https://rdmitra.shinyapps.io/tss_wld_gdp/" target="_blank">here</a>.<br />
                         Source: World Bank Indicators NY.GDP.MKTP.KD.ZG , NY.GDP.MKTP.CD <br />
-                        Created with: R, Shiny
+                        Created with: R, Shiny<br/>
+                        Access the data <a href="https://drive.google.com/drive/u/1/folders/13y50dOIkkZeAxsDNxq8-qLcTa0D1z_vG" target="_blank">here.</a>
                     </i>
                 </figcaption>
             </figure>
-            <script>
-                iFrameResize({
-                    heightCalculationMethod: 'taggedElement'
-                });
-            </script>
 
         </div>
 
@@ -123,7 +112,8 @@
                         Figure 2: Map of Sub Saharan Africa with economic indicators by year.
                         Also available <a href="https://public.tableau.com/views/africa_project_intro_map/intro_map?:embed=y&:display_count=yes" target="_blank">here</a>.<br />
                         Source: World Bank<br />
-                        Created with: Tableau
+                        Created with: Tableau<br />
+                        Access the data <a href="https://drive.google.com/drive/u/1/folders/13y50dOIkkZeAxsDNxq8-qLcTa0D1z_vG" target="_blank">here.</a>
                     </i>
                 </figcaption>
             </figure>
@@ -161,10 +151,11 @@
                 <iframe id="myIframe2" src="https://kg729.shinyapps.io/gdp_employment/" scrolling="no" frameborder="no"></iframe>
                 <figcaption style="font-size:small">
                     <i>
-                        Figure 3: Interactive plots for GDP and employment and vulnerable employment. 
+                        Figure 3: Interactive plots for GDP and employment and vulnerable employment.
                         Also available <a href="https://kg729.shinyapps.io/gdp_employment/" target="_blank">here</a>.<br />
                         Source: World Bank indicator SL.EMP.TOTL.SP.ZS, modeled ILO estimate SL.EMP.VULN.ZS, modeled ILO estimate<br />
-                        Created with: R, Shiny
+                        Created with: R, Shiny<br />
+                        Access the data <a href="https://drive.google.com/drive/u/1/folders/13y50dOIkkZeAxsDNxq8-qLcTa0D1z_vG" target="_blank">here.</a>
                     </i>
                 </figcaption>
             </figure>
@@ -197,12 +188,13 @@
                         Figure 4: Percent of GDP on Infrastructure/industry by year and by country.
                         Also available <a href="https://public.tableau.com/views/5_645/Sheet4?:embed=y&:display_count=yes" target="_blank">here</a>. <br />
                         Source: World Bank Indicator NV.IND.TOTL.ZS<br />
-                        Created with: Tableau
+                        Created with: Tableau<br />
+                        Access the data <a href="https://drive.google.com/drive/u/1/folders/13y50dOIkkZeAxsDNxq8-qLcTa0D1z_vG" target="_blank">here.</a>
                     </i>
                 </figcaption>
             </figure>
             <br /><br />
-            Use the dropdown in the plot below to select a country to see its infrastructure index
+            Use the dropdown in the plot below to <b>select a country</b> to see its infrastructure index
             change over time. Some countries, such as Angola, have a decreasing infrastructure index.
             On the other hand, countries such as Ethiopia and Kenya have been increasing their infrastructure index.
             <br /><br />
@@ -213,7 +205,8 @@
                         Figure 5: Infrastructure Index by year and by country.
                         Also available <a href="charts/dropdown_infra_index.html" target="_blank">here</a>.<br />
                         Source: African Development Bank Group<br />
-                        Created with: R, Plotly
+                        Created with: R, Plotly<br />
+                        Access the data <a href="https://drive.google.com/drive/u/1/folders/13y50dOIkkZeAxsDNxq8-qLcTa0D1z_vG" target="_blank">here.</a>
                     </i>
                 </figcaption>
             </figure>
@@ -231,7 +224,8 @@
                         The size of bubble represents the country’s 2016 GDP.
                         Also available <a href="charts/infra_and_fdi.html" target="_blank">here</a>.<br />
                         Source: World Bank indicators NY.GDP.MKTP.CD, NV.IND.TOTL.ZS, BX.KLT.DINV.WD.GD.ZS<br />
-                        Created with: R, Plotly
+                        Created with: R, Plotly<br />
+                        Access the data <a href="https://drive.google.com/drive/u/1/folders/13y50dOIkkZeAxsDNxq8-qLcTa0D1z_vG" target="_blank">here.</a>
                     </i>
                 </figcaption>
             </figure>
@@ -243,7 +237,7 @@
             Sub-Saharan Africa has been developing its telecom sectors by increasing electricity,
             internet and cellphone access. Electricity access grew across the region first, followed by internet, then cellphones.
             <br /><br />
-            Across the region, as of 2016, an average of 43% of the population has access to electricity.
+            Across the region, as of 2016, an average of 43% of the population has <b>access to electricity</b>.
             Burundi has the lowest level at 8%, while the Seychelles has highest level at 100%.
             Since 2000, levels have grown across all countries, though wide disparity remains.
             <br /><br />
@@ -263,7 +257,8 @@
                         Figure 7: Telecom indicators by year and by country.
                         Also available <a href="charts/bokeh_bar.html" target="_blank">here</a>.<br />
                         Source: World Bank indicators IT.NET.USER.ZS , EG.ELC.ACCS.ZS  , IT.CEL.SETS.P2<br />
-                        Created with: Python, Bokeh
+                        Created with: Python, Bokeh<br />
+                        Access the data <a href="https://drive.google.com/drive/u/1/folders/13y50dOIkkZeAxsDNxq8-qLcTa0D1z_vG" target="_blank">here.</a>
                     </i>
                 </figcaption>
             </figure>
@@ -282,7 +277,8 @@
                         Figure 8: Telecom indicators and GDP growth by year and by country.
                         Also available <a href="charts/bokeh_scatter.html" target="_blank">here</a>.<br />
                         Source: World Bank indicators IT.NET.USER.ZS , EG.ELC.ACCS.ZS  , IT.CEL.SETS.P2<br />
-                        Created with: Python, Bokeh
+                        Created with: Python, Bokeh<br />
+                        Access the data <a href="https://drive.google.com/drive/u/1/folders/13y50dOIkkZeAxsDNxq8-qLcTa0D1z_vG" target="_blank">here.</a>
                     </i>
                 </figcaption>
             </figure>
@@ -311,7 +307,8 @@
                         Based on a subset of Sub Saharan African countries, this is not a complete dataset.
                         Also available <a href="https://rdmitra.shinyapps.io/tss_trade/" target="_blank">here</a>.<br />
                         Source: United Nations, <a href="https://www.kaggle.com/unitednations/global-commodity-trade-statistics" target="_blank">Kaggle</a><br />
-                        Created with: R, networkD3, Shiny
+                        Created with: R, networkD3, Shiny<br />
+                        Access the data <a href="https://drive.google.com/drive/u/1/folders/13y50dOIkkZeAxsDNxq8-qLcTa0D1z_vG" target="_blank">here.</a>
                     </i>
                 </figcaption>
             </figure>
@@ -332,20 +329,27 @@
             <figure style="border: 1px solid #000; height:auto">
                 <div class="col-md-12">
                     <div class="col-md-6">
+                        <center>
+                            <h5>Exports</h5>
+                        </center>
                         <img src="charts/exports_wordcloud.png" />
                     </div>
                     <div class="col-md-6">
+                        <center>
+                            <h5>Imports</h5>
+                        </center>
                         <img src="charts/imports_wordcloud.png" />
                     </div>
                 </div>
                 <figcaption style="font-size:small">
                     <i>
-                        Figure 9: Trade flows showing value in USD for exports and imports by country and by year.
+                        Figure 10, 11: Trade flows showing value in USD for exports and imports by country and by year.
                         Based on a subset of Sub Saharan African countries, this is not a complete dataset.
                         Also available here - <a href="charts/exports_wordcloud.png" target="_blank">export</a> and
                         <a href="charts/imports_wordcloud.png" target="_blank">import</a>.<br />
                         Source: United Nations, <a href="https://www.kaggle.com/unitednations/global-commodity-trade-statistics" target="_blank">Kaggle</a><br />
-                        Created with: R, networkD3, Shiny
+                        Created with: R, networkD3, Shiny<br />
+                        Access the data <a href="https://drive.google.com/drive/u/1/folders/13y50dOIkkZeAxsDNxq8-qLcTa0D1z_vG" target="_blank">here.</a>
                     </i>
                 </figcaption>
             </figure>
@@ -378,7 +382,8 @@
                         Also available <a href="charts/3D_rotatable_birth_GDP.html" target="_blank">here</a><br />
                         Source: World Bank indicators SP.DYN.CONU.ZS, SP.DYN.CBRT.IN, NY.GDP.MKTP.KD.ZG,
                         African Development Bank Group<br />
-                        Created with: R, Plotly
+                        Created with: R, Plotly<br />
+                        Access the data <a href="https://drive.google.com/drive/u/1/folders/13y50dOIkkZeAxsDNxq8-qLcTa0D1z_vG" target="_blank">here.</a>
                     </i>
                 </figcaption>
             </figure>
@@ -397,7 +402,8 @@
                         Markers display rates of internet access and country income level.
                         Also available <a href="charts/leaflet_map.html" target="_blank">here</a><br />
                         Source: World Bank indicators, SP.DYN.CBRT.IN, IT.NET.USER.ZS<br />
-                        Created with: R, Leaflet
+                        Created with: R, Leaflet<br />
+                        Access the data <a href="https://drive.google.com/drive/u/1/folders/13y50dOIkkZeAxsDNxq8-qLcTa0D1z_vG" target="_blank">here.</a>
                     </i>
                 </figcaption>
             </figure>
@@ -416,6 +422,40 @@
             <br /><br />
             Kendra, RD, Sooeun
             <br /><br />
+            <hr style="border: 1px solid green;" />
+
+            <div class="col-md-12">
+                <h2 style="float:left; padding-right:30px">Download our code and data</h2>
+                <a type="button" class="btn btn-success btn-circle" style="height:35px" target="_blank"
+                   href="https://drive.google.com/drive/u/1/folders/13y50dOIkkZeAxsDNxq8-qLcTa0D1z_vG">
+                    <i class="glyphicon glyphicon-download" style="font-size:1.5em; text-align:center"></i>
+                </a>
+            </div>
+            <div style="text-align:justify">
+
+                <div class="col-md-12" style="width:100%">
+                    <p>
+                        All scripts used in this project can be accessed below. Note that visualizations created in Tableau (maps, area chart, bubble chart)
+                        will not be included in these files.
+                        <br />
+                    </p>
+                </div>
+                <div class="col-md-12" style="width:100%">
+                    <ul style="font-family:'Courier New'">
+
+                        <li style="list-style:none; padding-top:15px"><strong>Viz Creation Files</strong></li>
+                        <li>part_2_plot_r_plotly.R  - <i>Creates the Plotly bubble chart in the Infrastructure section</i></li>
+                        <li>part_2_plot_leaflet.R - <i>Creates the Bokeh bar and scatter plots in the Telecom section</i></li>
+                        <li>part_2_plot_bokeh.ipynb - <i>Creates the rotatable 3D plot in the Birth Rate section</i></li>
+                        <li>part_2_plot_3D.R - <i>Creates the word clouds in the Trade section</i></li>
+                        <li>part_2_plot_wordclouds.R - <i>Creates the Plotly dropdown in the Infrastructure section</i></li>
+                        <li>part2_Shiny_Sankey_Exploration.R - <i>Exploratory analysis for Shiny Web Apps</i></li>
+                        <li>tss_wld_gdp , tss_trade, tss_employment - <i>Shiny app folders, includes data</i></li>
+
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
 
